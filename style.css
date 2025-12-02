@@ -452,6 +452,8 @@ section {
   border-color: rgb(163, 163, 163);
   text-align: center;
   color: var(--text);
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 .section-container {
@@ -463,6 +465,50 @@ section {
   height: 400px;
   width: 400px;
   margin: auto 0;
+}
+
+/* Responsive adjustments for smaller screens to prevent overlapping */
+@media (max-width: 900px) {
+  section {
+    height: auto; /* let content determine height on small screens */
+    margin: 0 2rem;
+    padding-top: 3vh;
+  }
+
+  .section-container,
+  .about-containers {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+  }
+
+  .section__pic-container {
+    width: 220px;
+    height: 220px;
+    margin: 0;
+  }
+
+  .about-details-container {
+    width: 100%;
+    padding: 0 0.5rem;
+  }
+
+  .details-container {
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+  }
+
+  .text-container {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.5rem 0.25rem;
+    text-align: left;
+  }
+
+  .title {
+    font-size: 2.25rem;
+  }
 }
 
 /* EXPERIENCE SECTION */
@@ -495,10 +541,20 @@ section {
 
 article {
   display: flex;
-  width: 10rem;
-  justify-content: space-around;
-  gap: 0.5rem;
+  align-items: center;
+  gap: 0.75rem;
+  justify-content: flex-start;
+  width: auto;
   color: var(--text);
+}
+
+/* Target Font Awesome icons and any inline icon elements inside skill articles */
+.article-container article i,
+.article-container article .fa,
+.article-container article .fab,
+.article-container article .fas {
+  font-size: 1.8rem;
+  line-height: 1;
 }
 
 article .icon {

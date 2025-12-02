@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessible Tooltip Demo</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            padding: 3rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .demo-section {
+            margin: 3rem 0;
+            padding: 2rem;
+            background: var(--card-bg);
+            border-radius: 1rem;
+            border: 1px solid var(--border);
+        }
+
+        .demo-section h2 {
+            color: var(--text);
+            margin-top: 0;
+        }
+
+        .demo-section p {
+            color: var(--muted-text);
+            margin-bottom: 1.5rem;
+        }
+
+        .demo-row {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .instructions {
+            background: var(--accent);
+            color: white;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .instructions h1 {
+            margin-top: 0;
+            font-size: 1.5rem;
+        }
+
+        .instructions ul {
+            margin: 0.5rem 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="instructions">
+        <h1>🎯 Accessible Tooltip Demonstration</h1>
+        <p><strong>Test all accessibility features:</strong></p>
+        <ul>
+            <li>✅ <strong>Keyboard:</strong> Press Tab to navigate and see tooltips appear on focus</li>
+            <li>✅ <strong>Mouse:</strong> Hover over elements to see tooltips</li>
+            <li>✅ <strong>Touch:</strong> Tap elements on mobile devices</li>
+            <li>✅ <strong>Screen Reader:</strong> Enable NVDA/JAWS to hear tooltip announcements</li>
+        </ul>
+    </div>
+
+    <div class="demo-section">
+        <h2>Button Tooltips</h2>
+        <p>Hover, focus, or tap these buttons to see tooltips:</p>
+        <div class="demo-row">
+            <span class="tooltip-container">
+                <button class="btn btn-color-1" data-tooltip-trigger aria-describedby="tooltip-save">
+                    Save
+                </button>
+                <span id="tooltip-save" class="tooltip" role="tooltip">Save your changes</span>
+            </span>
+
+            <span class="tooltip-container">
+                <button class="btn btn-color-2" data-tooltip-trigger aria-describedby="tooltip-cancel">
+                    Cancel
+                </button>
+                <span id="tooltip-cancel" class="tooltip" role="tooltip">Discard changes</span>
+            </span>
+
+            <span class="tooltip-container">
+                <button class="btn btn-color-1" data-tooltip-trigger aria-describedby="tooltip-download">
+                    Download
+                </button>
+                <span id="tooltip-download" class="tooltip" role="tooltip">Download as PDF</span>
+            </span>
+        </div>
+    </div>
+
+    <div class="demo-section">
+        <h2>Icon Tooltips</h2>
+        <p>Icons with helpful tooltip descriptions:</p>
+        <div class="demo-row">
+            <span class="tooltip-container">
+                <span class="icon" role="button" tabindex="0" data-tooltip-trigger aria-label="Settings"
+                    aria-describedby="tooltip-settings" style="font-size: 2rem; cursor: pointer;">
+                    ⚙️
+                </span>
+                <span id="tooltip-settings" class="tooltip" role="tooltip">Open settings</span>
+            </span>
+
+            <span class="tooltip-container">
+                <span class="icon" role="button" tabindex="0" data-tooltip-trigger aria-label="Help"
+                    aria-describedby="tooltip-help" style="font-size: 2rem; cursor: pointer;">
+                    ❓
+                </span>
+                <span id="tooltip-help" class="tooltip" role="tooltip">Get help</span>
+            </span>
+
+            <span class="tooltip-container">
+                <span class="icon" role="button" tabindex="0" data-tooltip-trigger aria-label="Notifications"
+                    aria-describedby="tooltip-notifications" style="font-size: 2rem; cursor: pointer;">
+                    🔔
+                </span>
+                <span id="tooltip-notifications" class="tooltip" role="tooltip">View notifications</span>
+            </span>
+        </div>
+    </div>
+
+    <div class="demo-section">
+        <h2>Link Tooltips</h2>
+        <p>Links with additional context:</p>
+        <div class="demo-row">
+            <span class="tooltip-container">
+                <a href="#" data-tooltip-trigger aria-describedby="tooltip-docs"
+                    style="color: var(--accent); text-decoration: underline;">
+                    Documentation
+                </a>
+                <span id="tooltip-docs" class="tooltip" role="tooltip">View full documentation</span>
+            </span>
+
+            <span class="tooltip-container">
+                <a href="#" data-tooltip-trigger aria-describedby="tooltip-github"
+                    style="color: var(--accent); text-decoration: underline;">
+                    GitHub
+                </a>
+                <span id="tooltip-github" class="tooltip" role="tooltip">Visit our GitHub repository</span>
+            </span>
+        </div>
+    </div>
+
+    <div class="demo-section">
+        <h2>Bottom-Positioned Tooltips</h2>
+        <p>Tooltips can appear below elements too:</p>
+        <div class="demo-row">
+            <span class="tooltip-container">
+                <button class="btn btn-color-2" data-tooltip-trigger aria-describedby="tooltip-bottom">
+                    Hover Me
+                </button>
+                <span id="tooltip-bottom" class="tooltip tooltip-bottom" role="tooltip">This tooltip appears
+                    below!</span>
+            </span>
+        </div>
+    </div>
+
+    <div class="demo-section">
+        <h2>Accessibility Features</h2>
+        <ul style="color: var(--text);">
+            <li><strong>ARIA Attributes:</strong> All tooltips use <code>role="tooltip"</code> and
+                <code>aria-describedby</code></li>
+            <li><strong>Keyboard Navigation:</strong> All elements are focusable with Tab key</li>
+            <li><strong>Focus Indicators:</strong> Clear visual focus states with accent color</li>
+            <li><strong>Touch Support:</strong> Tap to show/hide with 3-second auto-hide</li>
+            <li><strong>No Auto-Dismiss:</strong> Tooltips stay visible while focused/hovered</li>
+            <li><strong>Screen Reader Compatible:</strong> Properly announced by assistive technologies</li>
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

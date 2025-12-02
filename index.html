@@ -7,6 +7,7 @@
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaquaries.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   </head>
   <body>
     <nav id="desktop-nav">
@@ -58,7 +59,7 @@
         <div class="btn-container">
           <button
             class="btn btn-color-2"
-            onclick="window.open('./assets/resume-example.pdf')"
+            onclick="window.open('./assets/Resume.pdf')"
           >
             Download CV
           </button>
@@ -88,7 +89,7 @@
       <div class="section-container">
         <div class="section__pic-container">
           <img
-            src="./assets/about-pic.png"
+            src="./assets/PhotoAi.png"
             alt="Profile picture"
             class="about-pic"
           />
@@ -97,38 +98,41 @@
           <div class="about-containers">
             <div class="details-container">
               <img
-                src="./assets/experience.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <h3>Experience</h3>
-              <p> 1+months experience <br> Frontend Development.</p>
-            </div>
-            <div class="details-container">
-              <img
                 src="./assets/education.png"
                 alt="Education icon"
                 class="icon"
               />
               <h3>Education</h3>
-              <p>Currently in university, <br> studying BSIT.</p>
+              <div class="education-list">
+                <div class="education-item">
+                  <h4>M. Cacho Elementary School</h4>
+                  <p class="education-year">2016-2017</p>
+                </div>
+                <div class="education-item">
+                  <h4>San Francisco National High School</h4>
+                  <p class="education-year">2021-2022</p>
+                </div>
+                <div class="education-item">
+                  <h4>Vinzons Pilot High School</h4>
+                  <p class="education-year">2021-2022</p>
+                </div>
+                <div class="education-item">
+                  <h4>Camarines Norte State College</h4>
+                  <p class="education-year">2022-2025</p>
+                  <p class="education-status">Currently attending college</p>
+                </div>
+              </div>
             </div>
           </div>
           <div class="text-container">
             <p>
-                I’m a BSIT student with big dreams of achieving success and providing my family with a better life. 
-                I aim to create opportunities for them and help them experience things they’ve never had before. 
-                I’m dedicated and hardworking, focused on turning my dreams into reality.
+                I'm a BSIT student with big dreams of achieving success and providing my family with a better life. 
+                I aim to create opportunities for them and help them experience things they've never had before. 
+                I'm dedicated and hardworking, focused on turning my dreams into reality.
             </p>
           </div>
         </div>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#experience'"
-      />
     </section>
     <section id="skills">
       <p class="section__text__p1">Explore My</p>
@@ -139,62 +143,43 @@
             <h2 class="experience-sub-title">Frontend Development</h2>
             <div class="article-container">
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
+                <i class="fab fa-html5" style="font-size: 2rem; color: #E34C26;"></i>
                 <div>
                   <h3>HTML</h3>
                   <p>Basic</p>
                 </div>
               </article>
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
+                <i class="fab fa-css3-alt" style="font-size: 2rem; color: #1572B6;"></i>
                 <div>
                   <h3>CSS</h3>
                   <p>Basic</p>
                 </div>
+              </article>
+              <article>
+                <i class="fab fa-js-square" style="font-size: 2rem; color: #F7DF1E;"></i>
+                <div>
+                  <h3>JavaScript</h3>
+                  <p>novice </p>
+                </div>
+              </article>
             </div>
           </div>
           <div class="details-container">
             <h2 class="experience-sub-title">Backend Development</h2>
             <div class="article-container">
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
+                <i class="fas fa-database" style="font-size: 2rem; color: #4479A1;"></i>
                 <div>
                   <h3>MySQL</h3>
                   <p>Basic</p>
                 </div>
               </article>
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
+                <i class="fab fa-php" style="font-size: 2rem; color: #777BB4;"></i>
                 <div>
                   <h3>PHP</h3>
                   <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>JavaScript</h3>
-                  <p>novice </p>
                 </div>
               </article>
             </div>
@@ -215,10 +200,10 @@
         <div class="about-containers">
           <div class="details-container color-container">
             <div class="project-card">
-              <h3 class="project-title">TrialWorkIM</h3>
-              <p class="project-description">A full-featured website project built with modern web technologies.</p>
-              <button class="project-btn" onclick="window.open('https://github.com/shironxiao/TrialWorkIM.git')">
-                View on GitHub
+              <h3 class="project-title">Tabeya</h3>
+              <p class="project-description">Tabeya — a restaurant website project (live demo).</p>
+              <button class="project-btn" onclick="window.open('https://shironxiao.github.io/IT100webDev/Tabeya/index.html')">
+                View Project
               </button>
             </div>
           </div>
@@ -229,12 +214,6 @@
           </div>
         </div>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#contact'"
-      />
     </section>
     <section id="contact">
       <p class="section__text__p1">Get in Touch</p>
@@ -246,7 +225,7 @@
             alt="Email icon"
             class="icon contact-icon email-icon"
           />
-          <p><a href="mailto:examplemail@gmail.com">sevillaronald32@gmail.com</a></p>
+          <p><a href="mailto:sevillaronald32@gmail.com">sevillaronald32@gmail.com</a></p>
         </div>
         <div class="contact-info-container">
           <img
@@ -264,7 +243,7 @@
           <ul class="nav-links">
             <li><a href="#profile">Home</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Experience</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>

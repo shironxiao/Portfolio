@@ -126,3 +126,26 @@
       font-size: 16px;
     }
   }
+  @media screen and (max-width: 1400px) {
+    #profile {
+      height: 83vh;
+      margin-bottom: 6rem;
+    }
+    .about-containers {
+      flex-wrap: wrap;
+    }
+    #contact,
+    #projects {
+      height: fit-content;
+    }
+    .details-container {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .education-list {
+      padding: 0.5rem;
+    }
+    .education-item {
+      margin-bottom: 1rem;
+    }
+  }
