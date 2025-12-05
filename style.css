@@ -62,7 +62,12 @@
 /* =========================================================
    GENERAL (PRESERVING ORIGINAL LAYOUT)
    ========================================================= */
-
+@font-face {
+  font-family: "Anton";
+  src: url("fonts/Anton-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
 body {
@@ -343,6 +348,7 @@ section {
 .section__text {
   align-self: center;
   text-align: center;
+  
 }
 
 .section__text p {
@@ -353,6 +359,7 @@ section {
 .section__text__p1 {
   text-align: center;
   color: var(--muted-text);
+  font-family: "Poppins", sans-serif;
 }
 
 .section__text__p2 {
@@ -363,6 +370,7 @@ section {
 
 .title {
   font-size: 3rem;
+  font-family: "Anton", sans-serif;
   text-align: center;
   color: var(--text);
 }
