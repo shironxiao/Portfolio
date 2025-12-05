@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaquaries.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">Ronald</div>
+      <div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Skills.html">Skills</a></li>
+            <li><a href="Project.html">Projects</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <button id="themeToggle" class="theme-toggle" aria-label="Toggle Light/Dark Mode">
+        <span class="toggle-icon">🌙</span>
+    </button>
+
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Ronald</div>
+      <button id="themeToggleMobile" class="theme-toggle" aria-label="Toggle Light/Dark Mode">
+        <span class="toggle-icon">🌙</span>
+      </button>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <ul>
+            <li><a href="#profile" onclick="toggleMenu()">Home</a></li>
+            <li><a href="#about" onclick="toggleMenu()">About</a></li>
+            <li><a href="#skills" onclick="toggleMenu()">Experience</a></li>
+            <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+            <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <section id="about">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            src="./assets/PhotoAi.png"
+            alt="Profile picture"
+            class="about-pic"
+          />
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="./assets/education.png"
+                alt="Education icon"
+                class="icon"
+              />
+              <h3>Education</h3>
+              <div class="education-list">
+                <div class="education-item">
+                  <h4>M. Cacho Elementary School</h4>
+                  <p class="education-year">2016-2017</p>
+                </div>
+                <div class="education-item">
+                  <h4>San Francisco National High School</h4>
+                  <p class="education-year">2021-2022</p>
+                </div>
+                <div class="education-item">
+                  <h4>Vinzons Pilot High School</h4>
+                  <p class="education-year">2021-2022</p>
+                </div>
+                <div class="education-item">
+                  <h4>Camarines Norte State College</h4>
+                  <p class="education-year">2022-2025</p>
+                  <p class="education-status">Currently attending college</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+                I'm a BSIT student with big dreams of achieving success and providing my family with a better life. 
+                I aim to create opportunities for them and help them experience things they've never had before. 
+                I'm dedicated and hardworking, focused on turning my dreams into reality.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="Project.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Skills.html">Skills</a></li>
+            <li><a href="Project.html">Projects</a></li>
+            <li><a href="Contact.html">Contact</a></li> 
+          </ul>
+        </div>
+      </nav>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

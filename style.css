@@ -320,6 +320,24 @@ section {
   height: 400px;
   width: 400px;
   margin: auto 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  overflow: hidden;
+  padding: 0.5rem;
+  background: var(--card-bg); /* adapts to light/dark via CSS variables */
+  border: 0.08rem solid var(--border);
+  box-shadow: 0 6px 18px rgba(16, 24, 40, 0.06);
+}
+
+/* Ensure the image fills the circular frame */
+.section__pic-container img,
+.about-pic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 50%;
 }
 
 .section__text {

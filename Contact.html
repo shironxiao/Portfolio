@@ -14,11 +14,11 @@
       <div class="logo">Ronald</div>
       <div>
         <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="About.html">About</a></li>
-          <li><a href="Skills.html">Skills</a></li>
-          <li><a href="Project.html">Projects</a></li>
-          <li><a href="Contact.html">Contact</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Skills.html">Skills</a></li>
+            <li><a href="Project.html">Projects</a></li>
+            <li><a href="Contact.html">Contact</a></li>
         </ul>
       </div>
       <button id="themeToggle" class="theme-toggle" aria-label="Toggle Light/Dark Mode">
@@ -39,8 +39,8 @@
         </div>
         <div class="menu-links">
           <ul>
-            <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
-            <li><a href="About.html" onclick="toggleMenu()">About</a></li>
+            <li><a href="#profile" onclick="toggleMenu()">Home</a></li>
+            <li><a href="#about" onclick="toggleMenu()">About</a></li>
             <li><a href="#skills" onclick="toggleMenu()">Experience</a></li>
             <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
             <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
@@ -48,42 +48,28 @@
         </div>
       </div>
     </nav>
-    <section id="profile">
-      <div class="section__pic-container">
-        <img src="./assets/circle.png" alt="Ronald Sevilla profile picture" />
-      </div>
-      <div class="section__text">
-        <p class="section__text__p1">Hello, I'm</p>
-        <h1 class="title">Ronald Sevilla</h1>
-        <p class="section__text__p2"> IT Student Developer</p>
-        <div class="btn-container">
-          <button
-            class="btn btn-color-2"
-            onclick="window.open('./assets/Resume.pdf')"
-          >
-            Download CV
-          </button>
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">
-            Contact Info
-          </button>
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:sevillaronald32@gmail.com">sevillaronald32@gmail.com</a></p>
         </div>
-        <div id="socials-container">
+        <div class="contact-info-container">
           <img
             src="./assets/linkedin.png"
-            alt="My LinkedIn profile"
-            class="icon"
-            onclick="location.href='https://www.linkedin.com/in/ronald-sevilla-124081190/'"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
           />
-          <img
-            src="./assets/github.png"
-            alt="My Github profile"
-            class="icon"
-            onclick="location.href='https://github.com/shironxiao/shironxiao'"
-          />
+          <p><a href="https://www.linkedin.com/in/ronald-sevilla-124081190/">LinkedIn</a></p>
         </div>
       </div>
     </section>
-  
     <footer>
       <nav>
         <div class="nav-links-container">
