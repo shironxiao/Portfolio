@@ -196,28 +196,26 @@ a:hover {
 .btn-color-2 {
   border: var(--border) 0.1rem solid;
   color: var(--text);
-  transition: all 0.3s ease;
-}
-
-.btn-color-1 {
-  background: var(--text);
-  color: var(--bg);
 }
 
 .btn-color-2 {
   background: none;
 }
 
+.btn-color-1,
+.btn-color-2:hover {
+  background: var(--text);
+  color: var(--bg);
+}
+
 .btn-color-1:hover {
   background: var(--accent);
-  color: var(--bg);
-  border-color: var(--accent);
+  color: white;
 }
 
 .btn-color-2:hover {
-  border-color: var(--accent);
-  background: var(--accent);
-  color: var(--bg);
+  border: var(--accent) 0.1rem solid;
+  background: var(--text);
 }
 /* HAMBURGER MENU */
 
@@ -377,7 +375,12 @@ section {
   color: var(--text);
 }
 
-
+#socials-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 1rem;
+}
 
 /* ICONS */
 
@@ -402,59 +405,36 @@ section {
   border-radius: 2rem;
 }
 
+.btn-color-1,
+.btn-color-2 {
+  border: rgb(53, 53, 53) 0.1rem solid;
+}
+
+.btn-color-1:hover,
+.btn-color-2:hover {
+  cursor: pointer;
+}
+
+.btn-color-1,
+.btn-color-2:hover {
+  background: rgb(53, 53, 53);
+  color: white;
+}
+
+.btn-color-1:hover {
+  background: rgb(0, 0, 0);
+}
+
+.btn-color-2 {
+  background: none;
+}
+
+.btn-color-2:hover {
+  border: rgb(255, 255, 255) 0.1rem solid;
+}
 
 .btn-container {
   gap: 1rem;
-}
-/* Styles for the "What i do" intro text (added) */
-section[id="What i do"] {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem 0;
-}
-
-section[id="What i do"] .intro-text-container {
-  max-width: 780px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 2rem;
-  text-align: center;
-}
-
-section[id="What i do"] .intro-text-container .title {
-  margin-bottom: 2rem;
-}
-
-section[id="What i do"] .intro-text-container .section__text__p2 {
-  text-align: justify;
-  line-height: 1.65;
-  margin-bottom: 1rem;
-}
-
-/* Responsive styles for "What i do" section */
-@media (max-width: 900px) {
-  section[id="What i do"] {
-    padding: 1.5rem 0;
-    margin: 0 2rem;
-    justify-content: center;
-  }
-
-  section[id="What i do"] .intro-text-container {
-    padding: 0 1rem;
-    max-width: 100%;
-  }
-
-  section[id="What i do"] .intro-text-container .section__text__p2 {
-    text-align: justify;
-    font-size: 1.5rem;
-  }
-}
-
-@media (max-width: 600px) {
-  section[id="What i do"] .intro-text-container .section__text__p2 {
-    font-size: 1.25rem;
-  }
 }
 
 
@@ -502,9 +482,183 @@ section[id="What i do"] .intro-text-container .section__text__p2 {
   }
 }
 
+/* EXPERIENCE SECTION */
 
+#experience {
+  position: relative;
+}
 
+.experience-sub-title {
+  color: var(--muted-text);
+  font-weight: 600;
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+}
 
+.experience-details-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.article-container {
+  display: flex;
+  text-align: initial;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 2.5rem;
+  justify-content: space-around;
+}
+
+article {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  justify-content: flex-start;
+  width: auto;
+  color: var(--text);
+}
+
+/* Target Font Awesome icons and any inline icon elements inside skill articles */
+.article-container article i,
+.article-container article .fa,
+.article-container article .fab,
+.article-container article .fas {
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+article .icon {
+  cursor: default;
+}
+/* Enhanced Skills Section - 4x2 Grid Layout */
+
+#skills .skills-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+#skills article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 2.5rem 2rem;
+  min-height: 250px;
+  background: var(--card-bg);
+  border: 2px solid var(--border);
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+#skills article:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  border-color: var(--accent);
+}
+
+#skills article i {
+  font-size: 6rem !important;
+  margin-bottom: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+#skills article:hover i {
+  transform: scale(1.1);
+}
+
+/* GitHub icon color adaptation for dark/light mode */
+#skills .fa-github {
+  color: #181717 !important;
+}
+
+:root[data-theme="dark"] #skills .fa-github {
+  color: #ffffff !important;
+}
+
+#skills article div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+#skills article h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--text);
+}
+
+#skills article p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--muted-text);
+}
+
+/* Media Queries for Skills Section */
+@media screen and (max-width: 1400px) {
+  #skills .skills-grid {
+    gap: 2rem;
+    padding: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #skills .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #skills .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  #skills article i {
+    font-size: 5rem !important;
+  }
+  
+  #skills article h3 {
+    font-size: 1.5rem;
+  }
+  
+  #skills article p {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #skills .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+  }
+  
+  #skills article {
+    padding: 1.5rem 1rem;
+    min-height: 200px;
+  }
+  
+  #skills article i {
+    font-size: 4rem !important;
+  }
+  
+  #skills article h3 {
+    font-size: 1.3rem;
+  }
+  
+  #skills article p {
+    font-size: 1rem;
+  }
+}
 /* FOOTER SECTION */
 
 footer {

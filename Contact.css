@@ -196,28 +196,26 @@ a:hover {
 .btn-color-2 {
   border: var(--border) 0.1rem solid;
   color: var(--text);
-  transition: all 0.3s ease;
-}
-
-.btn-color-1 {
-  background: var(--text);
-  color: var(--bg);
 }
 
 .btn-color-2 {
   background: none;
 }
 
+.btn-color-1,
+.btn-color-2:hover {
+  background: var(--text);
+  color: var(--bg);
+}
+
 .btn-color-1:hover {
   background: var(--accent);
-  color: var(--bg);
-  border-color: var(--accent);
+  color: white;
 }
 
 .btn-color-2:hover {
-  border-color: var(--accent);
-  background: var(--accent);
-  color: var(--bg);
+  border: var(--accent) 0.1rem solid;
+  background: var(--text);
 }
 /* HAMBURGER MENU */
 
@@ -377,7 +375,12 @@ section {
   color: var(--text);
 }
 
-
+#socials-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 1rem;
+}
 
 /* ICONS */
 
@@ -402,59 +405,36 @@ section {
   border-radius: 2rem;
 }
 
+.btn-color-1,
+.btn-color-2 {
+  border: rgb(53, 53, 53) 0.1rem solid;
+}
+
+.btn-color-1:hover,
+.btn-color-2:hover {
+  cursor: pointer;
+}
+
+.btn-color-1,
+.btn-color-2:hover {
+  background: rgb(53, 53, 53);
+  color: white;
+}
+
+.btn-color-1:hover {
+  background: rgb(0, 0, 0);
+}
+
+.btn-color-2 {
+  background: none;
+}
+
+.btn-color-2:hover {
+  border: rgb(255, 255, 255) 0.1rem solid;
+}
 
 .btn-container {
   gap: 1rem;
-}
-/* Styles for the "What i do" intro text (added) */
-section[id="What i do"] {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem 0;
-}
-
-section[id="What i do"] .intro-text-container {
-  max-width: 780px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 2rem;
-  text-align: center;
-}
-
-section[id="What i do"] .intro-text-container .title {
-  margin-bottom: 2rem;
-}
-
-section[id="What i do"] .intro-text-container .section__text__p2 {
-  text-align: justify;
-  line-height: 1.65;
-  margin-bottom: 1rem;
-}
-
-/* Responsive styles for "What i do" section */
-@media (max-width: 900px) {
-  section[id="What i do"] {
-    padding: 1.5rem 0;
-    margin: 0 2rem;
-    justify-content: center;
-  }
-
-  section[id="What i do"] .intro-text-container {
-    padding: 0 1rem;
-    max-width: 100%;
-  }
-
-  section[id="What i do"] .intro-text-container .section__text__p2 {
-    text-align: justify;
-    font-size: 1.5rem;
-  }
-}
-
-@media (max-width: 600px) {
-  section[id="What i do"] .intro-text-container .section__text__p2 {
-    font-size: 1.25rem;
-  }
 }
 
 
@@ -504,6 +484,46 @@ section[id="What i do"] .intro-text-container .section__text__p2 {
 
 
 
+/* CONTACT */
+
+#contact {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 70vh;
+}
+
+.contact-info-upper-container {
+  display: flex;
+  justify-content: center;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  background: var(--card-bg);
+  margin: 2rem auto;
+  padding: 0.5rem;
+}
+
+.contact-info-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1rem;
+}
+
+.contact-info-container p {
+  font-size: larger;
+  color: var(--text);
+}
+
+.contact-icon {
+  cursor: default;
+}
+
+.email-icon {
+  height: 2.5rem;
+}
 
 /* FOOTER SECTION */
 
