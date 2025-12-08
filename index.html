@@ -1,18 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mediaquaries.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  </head>
-  <body>
-    <nav id="desktop-nav">
-      <div class="logo">Ronald</div>
-      <div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mediaquaries.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+  <nav id="desktop-nav">
+    <div class="logo">Ronald</div>
+    <div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="Skills.html">Skills</a></li>
+        <li><a href="Project.html">Projects</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <button id="themeToggle" class="theme-toggle" aria-label="Toggle Light/Dark Mode">
+      <span class="toggle-icon">🌙</span>
+    </button>
+
+  </nav>
+  <nav id="hamburger-nav">
+    <div class="logo">Ronald</div>
+    <button id="themeToggleMobile" class="theme-toggle" aria-label="Toggle Light/Dark Mode">
+      <span class="toggle-icon">🌙</span>
+    </button>
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="menu-links">
+        <ul>
+          <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
+          <li><a href="About.html" onclick="toggleMenu()">About</a></li>
+          <li><a href="Skills.html" onclick="toggleMenu()">Skills</a></li>
+          <li><a href="Project.html" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="Contact.html" onclick="toggleMenu()">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <section id="profile">
+    <div class="section__pic-container">
+      <img src="./assets/circle.png" alt="Ronald Sevilla profile picture" />
+    </div>
+    <div class="section__text">
+      <p class="section__text__p1">Hello, I'm</p>
+      <h1 class="title">Ronald Sevilla</h1>
+      <p class="section__text__p2"> IT Student Developer</p>
+      <div class="btn-container">
+        <button class="btn btn-color-2" onclick="window.open('./assets/Resume.pdf')">
+          Download CV
+        </button>
+        <button class="btn btn-color-1" onclick="location.href='./#contact'">
+          Contact Info
+        </button>
+      </div>
+    </div>
+  </section>
+  <section id="What i do">
+    <div class="intro-text-container">
+      <p class="title">What I Do as a Beginner Developer</p>
+      <p class="section__text__p2">
+        I'm a beginner backend developer who enjoys working with server-side
+        logic, data handling, and the hidden parts of applications that make
+        everything function smoothly. I'm learning how to break down complex
+        problems and turn them into simple, efficient solutions that support
+        the overall performance of a project. The more I explore backend
+        concepts, the more excited I become about understanding how systems
+        connect and operate behind the scenes.
+      </p>
+      <p class="section__text__p2">
+        I focus on building basic APIs, managing databases, and improving my
+        skills through hands-on projects and continuous learning. Every new
+        challenge helps me grow, whether it's debugging issues, organizing
+        data, or experimenting with different backend tools and frameworks.
+        With each step, I'm becoming more confident in creating reliable
+        backend features and shaping my path as a backend developer.
+      </p>
+    </div>
+  </section>
+  <footer>
+    <div id="socials-container">
+      <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon"
+        onclick="location.href='https://www.linkedin.com/in/ronald-sevilla-124081190/'" />
+      <img src="./assets/github.png" alt="My Github profile" class="icon"
+        onclick="location.href='https://github.com/shironxiao/shironxiao'" />
+      <img src="./assets/facebook.png" alt="My facebook profile" class="icon"
+        onclick="location.href='https://www.facebook.com/shiron08/'" />
+      <img src="./assets/instagram.png" alt="My instagram profile" class="icon"
+        onclick="location.href='https://https://www.instagram.com/sh_i_ron'" />
+    </div>
+    <nav>
+      <div class="nav-links-container">
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="About.html">About</a></li>
@@ -21,116 +111,10 @@
           <li><a href="Contact.html">Contact</a></li>
         </ul>
       </div>
-      <button id="themeToggle" class="theme-toggle" aria-label="Toggle Light/Dark Mode">
-        <span class="toggle-icon">🌙</span>
-    </button>
+    </nav>
+    <p class="copyright">© 2025 Ronald • All rights reserved.</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
 
-    </nav>
-    <nav id="hamburger-nav">
-      <div class="logo">Ronald</div>
-      <button id="themeToggleMobile" class="theme-toggle" aria-label="Toggle Light/Dark Mode">
-        <span class="toggle-icon">🌙</span>
-      </button>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="menu-links">
-          <ul>
-            <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
-            <li><a href="About.html" onclick="toggleMenu()">About</a></li>
-            <li><a href="Skills.html" onclick="toggleMenu()">Experience</a></li>
-            <li><a href="Project.html" onclick="toggleMenu()">Projects</a></li>
-            <li><a href="Contact.html" onclick="toggleMenu()">Contact</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <section id="profile">
-      <div class="section__pic-container">
-        <img src="./assets/circle.png" alt="Ronald Sevilla profile picture" />
-      </div>
-      <div class="section__text">
-        <p class="section__text__p1">Hello, I'm</p>
-        <h1 class="title">Ronald Sevilla</h1>
-        <p class="section__text__p2"> IT Student Developer</p>
-        <div class="btn-container">
-          <button
-            class="btn btn-color-2"
-            onclick="window.open('./assets/Resume.pdf')"
-          >
-            Download CV
-          </button>
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">
-            Contact Info
-          </button>
-        </div>
-      </div>
-    </section>
-    <section id="What i do">
-      <div class="intro-text-container">
-        <p class="title">What I Do as a Beginner Developer</p>
-        <p class="section__text__p2">
-          I'm a beginner backend developer who enjoys working with server-side
-          logic, data handling, and the hidden parts of applications that make
-          everything function smoothly. I'm learning how to break down complex
-          problems and turn them into simple, efficient solutions that support
-          the overall performance of a project. The more I explore backend
-          concepts, the more excited I become about understanding how systems
-          connect and operate behind the scenes.
-        </p>
-        <p class="section__text__p2">
-          I focus on building basic APIs, managing databases, and improving my
-          skills through hands-on projects and continuous learning. Every new
-          challenge helps me grow, whether it's debugging issues, organizing
-          data, or experimenting with different backend tools and frameworks.
-          With each step, I'm becoming more confident in creating reliable
-          backend features and shaping my path as a backend developer.
-        </p>
-      </div>
-    </section>
-    <footer>
-      <div id="socials-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="My LinkedIn profile"
-            class="icon"
-            onclick="location.href='https://www.linkedin.com/in/ronald-sevilla-124081190/'"
-          />
-          <img
-            src="./assets/github.png"
-            alt="My Github profile"
-            class="icon"
-            onclick="location.href='https://github.com/shironxiao/shironxiao'"
-          />
-          <img
-            src="./assets/facebook.png"
-            alt="My facebook profile"
-            class="icon"
-            onclick="location.href='https://www.facebook.com/shiron08/'"
-          />
-          <img
-            src="./assets/instagram.png"
-            alt="My instagram profile"
-            class="icon"
-            onclick="location.href='https://https://www.instagram.com/sh_i_ron'"
-          />
-        </div>
-      <nav>
-        <div class="nav-links-container">
-          <ul class="nav-links">
-            <li><a href="Project.html">Home</a></li>
-            <li><a href="About.html">About</a></li>
-            <li><a href="Skills.html">Skills</a></li>
-            <li><a href="Project.html">Projects</a></li>
-            <li><a href="Contact.html">Contact</a></li>
-          </ul>
-        </div>
-      </nav>
-      <p class="copyright">© 2025 Ronald • All rights reserved.</p>
-    </footer>
-    <script src="script.js"></script>
-  </body>
 </html>

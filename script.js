@@ -66,38 +66,25 @@ if (toggleBtnMobile) toggleBtnMobile.addEventListener("click", toggleTheme);
 function updateActiveNavLink() {
     // Get all nav links
     const navLinks = document.querySelectorAll('.nav-links a');
-    
-    // Get all sections
-    const sections = document.querySelectorAll('section, #profile');
-    
-    let currentSection = '';
-    
-    // Find which section is currently in view
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        
-        if (window.scrollY >= sectionTop - 200) {
-            currentSection = section.getAttribute('id');
-        }
-    });
-    
-    // Update active link styling
+
+    // Get current page filename
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+
+    // Update active link styling based on current page
     navLinks.forEach(link => {
         link.classList.remove('active');
-        
-        // Extract the section ID from the href
+
+        // Get the href attribute
         const href = link.getAttribute('href');
-        const sectionId = href.replace('#', '');
-        
-        if (sectionId === currentSection) {
+
+        // Check if this link matches the current page
+        if (href === currentPage ||
+            (currentPage === '' && href === 'index.html') ||
+            (currentPage === 'index.html' && href === 'index.html')) {
             link.classList.add('active');
         }
     });
 }
-
-// Update active link on scroll
-window.addEventListener('scroll', updateActiveNavLink);
 
 // Update active link on page load
 document.addEventListener('DOMContentLoaded', updateActiveNavLink);
@@ -129,10 +116,10 @@ function showNav() {
     desktopNav.classList.add('visible');
     hamburgerNav.classList.remove('hidden');
     hamburgerNav.classList.add('visible');
-    
+
     // Clear existing timeout
     clearTimeout(navHideTimeout);
-    
+
     // Set new timeout to hide nav after idle time
     navHideTimeout = setTimeout(() => {
         desktopNav.classList.remove('visible');
@@ -161,3 +148,88 @@ window.addEventListener('load', () => {
     showNav();
 });
 
+
+// ===== CONTACT FORM HANDLING =====
+document.addEventListener('DOMContentLoaded', function () {
+    const contactForm = document.getElementById('contactForm');
+    const successMessage = document.getElementById('successMessage');
+
+    if (contactForm) {
+        contactForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+
+            // Validate form (basic validation, browser handles required fields)
+            if (name && email && subject && message) {
+                // Hide the form
+                contactForm.style.display = 'none';
+
+                // Show success message
+                successMessage.style.display = 'block';
+
+                // Log form data (in a real application, you would send this to a server)
+                console.log('Form submitted:', {
+                    name: name,
+                    email: email,
+                    subject: subject,
+                    message: message,
+                    timestamp: new Date().toISOString()
+                });
+
+                // Reset form after 5 seconds and show it again
+                setTimeout(function () {
+                    contactForm.reset();
+                    contactForm.style.display = 'flex';
+                    successMessage.style.display = 'none';
+                }, 5000);
+            }
+        });
+    }
+});
+
+// ===== FULLSCREEN IMAGE VIEWER =====
+function openImageFullscreen(imgElement) {
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('modalImage');
+
+    if (modal && modalImg && imgElement) {
+        modal.classList.add('active');
+        modalImg.src = imgElement.src;
+        modalImg.alt = imgElement.alt;
+        document.body.style.overflow = 'hidden'; // Prevent scrolling
+    }
+}
+
+function closeImageFullscreen() {
+    const modal = document.getElementById('imageModal');
+
+    if (modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = ''; // Restore scrolling
+    }
+}
+
+// Close modal when clicking outside the image
+document.addEventListener('DOMContentLoaded', function () {
+    const modal = document.getElementById('imageModal');
+
+    if (modal) {
+        modal.addEventListener('click', function (e) {
+            if (e.target === modal) {
+                closeImageFullscreen();
+            }
+        });
+    }
+});
+
+// Close modal with ESC key
+document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+        closeImageFullscreen();
+    }
+});

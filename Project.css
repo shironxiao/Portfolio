@@ -41,6 +41,7 @@
   --border: #E5E7EB;
   --muted-text: #6B7280;
 }
+
 /* Make icons adapt to theme */
 .icon {
   cursor: pointer;
@@ -59,6 +60,7 @@
 :root[data-theme="dark"] .about-pic {
   filter: none;
 }
+
 /* =========================================================
    GENERAL (PRESERVING ORIGINAL LAYOUT)
    ========================================================= */
@@ -68,6 +70,7 @@
   font-weight: normal;
   font-style: normal;
 }
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
 body {
@@ -140,6 +143,28 @@ nav {
   font-size: 1.5rem;
 }
 
+.nav-links a {
+  color: var(--text);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-color: var(--accent);
+}
+
+/* Active nav link indicator */
+.nav-links a.active {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-color: var(--accent);
+}
+
+/* General link styles */
 a {
   color: var(--text);
   text-decoration: none;
@@ -151,13 +176,6 @@ a:hover {
   text-decoration: underline;
   text-underline-offset: 1rem;
   text-decoration-color: var(--accent);
-}
-
-/* Active nav link indicator */
-.nav-links a.active {
-  color: var(--accent);
-  border-bottom: 2px solid var(--accent);
-  padding-bottom: 0.5rem;
 }
 
 .logo {
@@ -192,6 +210,7 @@ a:hover {
 .theme-toggle:active {
   transform: scale(0.95);
 }
+
 .btn-color-1,
 .btn-color-2 {
   border: var(--border) 0.1rem solid;
@@ -217,6 +236,7 @@ a:hover {
   border: var(--accent) 0.1rem solid;
   background: var(--text);
 }
+
 /* HAMBURGER MENU */
 
 #hamburger-nav {
@@ -315,7 +335,7 @@ section {
 .section__text {
   align-self: center;
   text-align: center;
-  
+
 }
 
 .section__text p {
@@ -409,7 +429,8 @@ section {
 /* Responsive adjustments for smaller screens to prevent overlapping */
 @media (max-width: 900px) {
   section {
-    height: auto; /* let content determine height on small screens */
+    height: auto;
+    /* let content determine height on small screens */
     margin: 0 2rem;
     padding-top: 3vh;
   }
@@ -501,11 +522,8 @@ section {
 
 #projects {
   position: relative;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 4rem 10rem;
+  padding-top: 4vh;
+  margin-bottom: 3rem;
 }
 
 .project-container {
@@ -652,16 +670,12 @@ section {
 
 /* Responsive Design */
 @media (max-width: 1200px) {
-  #projects {
-    padding: 4rem 5rem;
+  .project-image {
+    height: 350px;
   }
 }
 
 @media (max-width: 900px) {
-  #projects {
-    padding: 3rem 2rem;
-    min-height: auto;
-  }
 
   .project-image {
     height: 300px;
@@ -689,9 +703,6 @@ section {
 }
 
 @media (max-width: 600px) {
-  #projects {
-    padding: 2rem 1rem;
-  }
 
   .project-panel {
     border-radius: 1rem;
@@ -721,6 +732,10 @@ section {
     font-size: 1.75rem;
   }
 
+  .fa-js {
+    padding: 0.1rem;
+  }
+
   .tech-item span {
     font-size: 0.85rem;
   }
@@ -744,12 +759,14 @@ footer {
   justify-content: center;
   gap: 0.5rem;
 }
+
 #socials-container {
   display: flex;
   justify-content: center;
   margin-top: 5rem;
   gap: 1rem;
 }
+
 footer nav {
   width: 100%;
   display: flex;
@@ -787,8 +804,133 @@ footer p {
 }
 
 footer .copyright {
-  margin-top:3rem;
+  margin-top: 3rem;
   font-size: 0.9rem;
   color: var(--muted-text);
 }
 
+/* IMAGE OVERLAY AND FULLSCREEN MODAL */
+
+.project-image {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  color: white;
+}
+
+.project-image:hover .image-overlay {
+  opacity: 1;
+}
+
+.image-overlay i {
+  font-size: 2rem;
+}
+
+.image-overlay span {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Fullscreen Modal */
+.image-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.95);
+  animation: fadeIn 0.3s ease;
+}
+
+.image-modal.active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  animation: zoomIn 0.3s ease;
+}
+
+.modal-close {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10000;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+
+.modal-close:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: rotate(90deg);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+  .modal-close {
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    width: 40px;
+    height: 40px;
+  }
+
+  .modal-content {
+    max-width: 95%;
+    max-height: 95%;
+  }
+}

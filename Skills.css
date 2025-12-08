@@ -41,6 +41,7 @@
   --border: #E5E7EB;
   --muted-text: #6B7280;
 }
+
 /* Make icons adapt to theme */
 .icon {
   cursor: pointer;
@@ -59,6 +60,7 @@
 :root[data-theme="dark"] .about-pic {
   filter: none;
 }
+
 /* =========================================================
    GENERAL (PRESERVING ORIGINAL LAYOUT)
    ========================================================= */
@@ -68,6 +70,7 @@
   font-weight: normal;
   font-style: normal;
 }
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
 body {
@@ -140,6 +143,28 @@ nav {
   font-size: 1.5rem;
 }
 
+.nav-links a {
+  color: var(--text);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-color: var(--accent);
+}
+
+/* Active nav link indicator */
+.nav-links a.active {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-color: var(--accent);
+}
+
+/* General link styles */
 a {
   color: var(--text);
   text-decoration: none;
@@ -151,13 +176,6 @@ a:hover {
   text-decoration: underline;
   text-underline-offset: 1rem;
   text-decoration-color: var(--accent);
-}
-
-/* Active nav link indicator */
-.nav-links a.active {
-  color: var(--accent);
-  border-bottom: 2px solid var(--accent);
-  padding-bottom: 0.5rem;
 }
 
 .logo {
@@ -192,6 +210,7 @@ a:hover {
 .theme-toggle:active {
   transform: scale(0.95);
 }
+
 .btn-color-1,
 .btn-color-2 {
   border: var(--border) 0.1rem solid;
@@ -217,6 +236,7 @@ a:hover {
   border: var(--accent) 0.1rem solid;
   background: var(--text);
 }
+
 /* HAMBURGER MENU */
 
 #hamburger-nav {
@@ -330,7 +350,8 @@ section {
   border-radius: 50%;
   overflow: hidden;
   padding: 0.5rem;
-  background: var(--card-bg); /* adapts to light/dark via CSS variables */
+  background: var(--card-bg);
+  /* adapts to light/dark via CSS variables */
   border: 0.08rem solid var(--border);
   box-shadow: 0 6px 18px rgba(16, 24, 40, 0.06);
 }
@@ -348,7 +369,7 @@ section {
 .section__text {
   align-self: center;
   text-align: center;
-  
+
 }
 
 .section__text p {
@@ -441,7 +462,8 @@ section {
 /* Responsive adjustments for smaller screens to prevent overlapping */
 @media (max-width: 900px) {
   section {
-    height: auto; /* let content determine height on small screens */
+    height: auto;
+    /* let content determine height on small screens */
     margin: 0 2rem;
     padding-top: 3vh;
   }
@@ -531,6 +553,7 @@ article {
 article .icon {
   cursor: default;
 }
+
 /* Enhanced Skills Section - 4x2 Grid Layout */
 
 #skills .skills-grid {
@@ -621,15 +644,15 @@ article .icon {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
   }
-  
+
   #skills article i {
     font-size: 5rem !important;
   }
-  
+
   #skills article h3 {
     font-size: 1.5rem;
   }
-  
+
   #skills article p {
     font-size: 1.1rem;
   }
@@ -641,24 +664,25 @@ article .icon {
     gap: 1rem;
     padding: 1rem;
   }
-  
+
   #skills article {
     padding: 1.5rem 1rem;
     min-height: 200px;
   }
-  
+
   #skills article i {
     font-size: 4rem !important;
   }
-  
+
   #skills article h3 {
     font-size: 1.3rem;
   }
-  
+
   #skills article p {
     font-size: 1rem;
   }
 }
+
 /* FOOTER SECTION */
 
 footer {
@@ -670,12 +694,14 @@ footer {
   justify-content: center;
   gap: 0.5rem;
 }
+
 #socials-container {
   display: flex;
   justify-content: center;
   margin-top: 5rem;
   gap: 1rem;
 }
+
 footer nav {
   width: 100%;
   display: flex;
@@ -713,8 +739,7 @@ footer p {
 }
 
 footer .copyright {
-  margin-top:3rem;
+  margin-top: 3rem;
   font-size: 0.9rem;
   color: var(--muted-text);
 }
-

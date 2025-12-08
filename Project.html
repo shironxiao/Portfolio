@@ -1,128 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="Project.css" />
-    <link rel="stylesheet" href="ProjectMediaQuaries.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  </head>
-  <body>
-    <nav id="desktop-nav">
-      <div class="logo">Ronald</div>
-      <div>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="About.html">About</a></li>
-            <li><a href="Skills.html">Skills</a></li>
-            <li><a href="Project.html">Projects</a></li>
-            <li><a href="Contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <button id="themeToggle" class="theme-toggle" aria-label="Toggle Light/Dark Mode">
-        <span class="toggle-icon">🌙</span>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="Project.css" />
+  <link rel="stylesheet" href="ProjectMediaQuaries.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+  <nav id="desktop-nav">
+    <div class="logo">Ronald</div>
+    <div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="Skills.html">Skills</a></li>
+        <li><a href="Project.html">Projects</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <button id="themeToggle" class="theme-toggle" aria-label="Toggle Light/Dark Mode">
+      <span class="toggle-icon">🌙</span>
     </button>
 
-    </nav>
-    <nav id="hamburger-nav">
-      <div class="logo">Ronald</div>
-      <button id="themeToggleMobile" class="theme-toggle" aria-label="Toggle Light/Dark Mode">
-        <span class="toggle-icon">🌙</span>
-      </button>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="menu-links">
-          <ul>
-            <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
-            <li><a href="About.html" onclick="toggleMenu()">About</a></li>
-            <li><a href="Skills.html" onclick="toggleMenu()">Experience</a></li>
-            <li><a href="Project.html" onclick="toggleMenu()">Projects</a></li>
-            <li><a href="Contact.html" onclick="toggleMenu()">Contact</a></li>
-          </ul>
-        </div>
+  </nav>
+  <nav id="hamburger-nav">
+    <div class="logo">Ronald</div>
+    <button id="themeToggleMobile" class="theme-toggle" aria-label="Toggle Light/Dark Mode">
+      <span class="toggle-icon">🌙</span>
+    </button>
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
-    </nav>
-    <section id="projects">
-      <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Projects</h1>
-      <div class="project-container">
-        <div class="project-panel">
-          <div class="project-image">
-            <img src="./assets/ProjectImage.png" alt="Project Preview" onerror="this.style.background='linear-gradient(135deg, var(--accent), var(--card-bg))'">
+      <div class="menu-links">
+        <ul>
+          <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
+          <li><a href="About.html" onclick="toggleMenu()">About</a></li>
+          <li><a href="Skills.html" onclick="toggleMenu()">Skills</a></li>
+          <li><a href="Project.html" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="Contact.html" onclick="toggleMenu()">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <section id="projects">
+    <p class="section__text__p1">Browse My Recent</p>
+    <h1 class="title">Projects</h1>
+    <div class="project-container">
+      <div class="project-panel">
+        <div class="project-image" onclick="openImageFullscreen(this.querySelector('img'))">
+          <img src="./assets/ProjectImage.png" alt="Project Preview"
+            onerror="this.style.background='linear-gradient(135deg, var(--accent), var(--card-bg))'">
+          <div class="image-overlay">
+            <i class="fas fa-expand"></i>
+            <span>Click to enlarge</span>
           </div>
-          <div class="project-content">
-            <h2 class="project-title">My Portfolio Website</h2>
-            <p class="project-description">
-              A modern, responsive portfolio website showcasing my skills and projects. 
-              Features a clean design with light/dark mode toggle and smooth navigation experience.
-            </p>
-            <div class="tech-stack">
-              <div class="tech-item">
-                <i class="fab fa-html5"></i>
-                <span>HTML</span>
-              </div>
-              <div class="tech-item">
-                <i class="fab fa-css3-alt"></i>
-                <span>CSS</span>
-              </div>
-              <div class="tech-item">
-                <i class="fab fa-js"></i>
-                <span>JavaScript</span>
-              </div>
+        </div>
+        <div class="project-content">
+          <h2 class="project-title">My Portfolio Website</h2>
+          <p class="project-description">
+            A modern, responsive portfolio website showcasing my skills and projects.
+            Features a clean design with light/dark mode toggle and smooth navigation experience.
+          </p>
+          <div class="tech-stack">
+            <div class="tech-item">
+              <i class="fab fa-html5"></i>
+              <span>HTML</span>
             </div>
-            <button class="project-btn" onclick="window.open('https://shironxiao.github.io/BeginnerPortfolio/')">
-              <i class="fas fa-external-link-alt"></i> View Live Demo
-            </button>
+            <div class="tech-item">
+              <i class="fab fa-css3-alt"></i>
+              <span>CSS</span>
+            </div>
+            <div class="tech-item">
+              <i class="fab fa-js"></i>
+              <span>JavaScript</span>
+            </div>
           </div>
+          <button class="project-btn" onclick="window.open('https://shironxiao.github.io/BeginnerPortfolio/')">
+            <i class="fas fa-external-link-alt"></i> View Live Demo
+          </button>
         </div>
       </div>
-    </section>
-     <footer>
-      <div id="socials-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="My LinkedIn profile"
-            class="icon"
-            onclick="location.href='https://www.linkedin.com/in/ronald-sevilla-124081190/'"
-          />
-          <img
-            src="./assets/github.png"
-            alt="My Github profile"
-            class="icon"
-            onclick="location.href='https://github.com/shironxiao/shironxiao'"
-          />
-          <img
-            src="./assets/facebook.png"
-            alt="My facebook profile"
-            class="icon"
-            onclick="location.href='https://www.facebook.com/shiron08/'"
-          />
-          <img
-            src="./assets/instagram.png"
-            alt="My instagram profile"
-            class="icon"
-            onclick="location.href='https://https://www.instagram.com/sh_i_ron'"
-          />
-        </div>
-      <nav>
-        <div class="nav-links-container">
-          <ul class="nav-links">
-            <li><a href="Project.html">Home</a></li>
-            <li><a href="About.html">About</a></li>
-            <li><a href="Skills.html">Skills</a></li>
-            <li><a href="Project.html">Projects</a></li>
-            <li><a href="Contact.html">Contact</a></li>
-          </ul>
-        </div>
-      </nav>
-      <p class="copyright">© 2025 Ronald • All rights reserved.</p>
-    </footer>
-    <script src="script.js"></script>
-  </body>
+    </div>
+  </section>
+  <footer>
+    <div id="socials-container">
+      <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon"
+        onclick="location.href='https://www.linkedin.com/in/ronald-sevilla-124081190/'" />
+      <img src="./assets/github.png" alt="My Github profile" class="icon"
+        onclick="location.href='https://github.com/shironxiao/shironxiao'" />
+      <img src="./assets/facebook.png" alt="My facebook profile" class="icon"
+        onclick="location.href='https://www.facebook.com/shiron08/'" />
+      <img src="./assets/instagram.png" alt="My instagram profile" class="icon"
+        onclick="location.href='https://https://www.instagram.com/sh_i_ron'" />
+    </div>
+    <nav>
+      <div class="nav-links-container">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="About.html">About</a></li>
+          <li><a href="Skills.html">Skills</a></li>
+          <li><a href="Project.html">Projects</a></li>
+          <li><a href="Contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <p class="copyright">© 2025 Ronald • All rights reserved.</p>
+  </footer>
+
+  <!-- Fullscreen Image Modal -->
+  <div id="imageModal" class="image-modal">
+    <span class="modal-close" onclick="closeImageFullscreen()">
+      <i class="fas fa-times"></i>
+    </span>
+    <img class="modal-content" id="modalImage">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
 </html>
