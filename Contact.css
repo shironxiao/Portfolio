@@ -99,9 +99,9 @@ nav,
 }
 
 nav {
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  height: 17vh;
+  height: 10vh;
 }
 
 /* Sticky nav positioning */
@@ -187,7 +187,7 @@ a:hover {
 /* THEME TOGGLE BUTTON */
 .theme-toggle {
   background: none;
-  border: 2px solid var(--accent);
+  border: none;
   color: var(--text);
   padding: 8px 12px;
   border-radius: 8px;
@@ -599,10 +599,13 @@ section {
   color: var(--muted-text);
   font-size: 1rem;
   margin: 0;
-  text-decoration: underline;
   transition: color 0.3s ease;
   word-wrap: break-word;
   overflow-wrap: break-word;
+}
+
+.contact-text a {
+  text-decoration: underline;
 }
 
 .contact-text a:hover {

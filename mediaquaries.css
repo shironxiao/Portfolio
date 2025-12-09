@@ -124,6 +124,10 @@
     flex-wrap: wrap;
   }
 
+  .btn-container {
+    justify-content: center;
+  }
+
   .contact-info-container {
     margin: 0;
   }

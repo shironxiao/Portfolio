@@ -99,9 +99,9 @@ nav,
 }
 
 nav {
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  height: 17vh;
+  height: 10vh;
 }
 
 /* Sticky nav positioning */
@@ -190,7 +190,7 @@ a:hover {
 /* THEME TOGGLE BUTTON */
 .theme-toggle {
   background: none;
-  border: 2px solid var(--accent);
+  border: none;
   color: var(--text);
   padding: 8px 12px;
   border-radius: 8px;
@@ -411,7 +411,7 @@ section {
 
 .btn-container {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 1rem;
 }
 
