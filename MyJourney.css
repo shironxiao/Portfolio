@@ -1,0 +1,206 @@
+/* Journey Lessons Section */
+.journey-lessons {
+    padding: 4rem 2rem;
+    background: rgba(26, 26, 46, 0.95);
+}
+
+.lessons-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.lessons-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.lessons-title .blue-text {
+    color: #4A90E2;
+}
+
+.lessons-title .gold-text {
+    color: #FFD700;
+}
+
+.lesson-article {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    margin-top: 2rem;
+}
+
+.lesson-image-container {
+    flex: 1;
+    min-height: 300px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lesson-image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.lesson-content {
+    flex: 1;
+    color: white;
+}
+
+.lesson-heading {
+    font-size: 2rem;
+    color: #FFD700;
+    margin-bottom: 1.5rem;
+}
+
+.lesson-text {
+    color: white;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.lesson-quote {
+    color: white;
+    font-size: 1.2rem;
+    font-style: italic;
+    padding: 1.5rem;
+    border-left: 4px solid #FFD700;
+    background: rgba(74, 144, 226, 0.1);
+    margin-top: 2rem;
+    border-radius: 5px;
+}
+
+/* Journey Crew Section */
+.journey-crew {
+    padding: 4rem 2rem;
+    background: rgba(20, 20, 40, 0.98);
+}
+
+.crew-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.crew-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.crew-title .blue-text {
+    color: #4A90E2;
+}
+
+.crew-title .gold-text {
+    color: #FFD700;
+}
+
+.crew-article {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    margin-top: 2rem;
+}
+
+.crew-content {
+    flex: 1;
+    color: white;
+}
+
+.crew-heading {
+    font-size: 2rem;
+    color: #FFD700;
+    margin-bottom: 1.5rem;
+}
+
+.crew-text {
+    color: white;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.crew-values {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.value-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.value-icon {
+    font-size: 2rem;
+}
+
+.value-text {
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.crew-image-container {
+    flex: 1;
+    min-height: 300px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.crew-image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.crew-caption {
+    color: white;
+    font-style: italic;
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+    .lesson-article,
+    .crew-article {
+        flex-direction: column;
+    }
+
+    .lessons-title,
+    .crew-title {
+        font-size: 2rem;
+    }
+
+    .lesson-heading,
+    .crew-heading {
+        font-size: 1.5rem;
+    }
+
+    .lesson-text,
+    .crew-text {
+        font-size: 1rem;
+    }
+
+    .crew-values {
+        justify-content: center;
+    }
+}

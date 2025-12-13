@@ -26,41 +26,6 @@ document.addEventListener('keydown', function (e) {
     }
 });
 
-const root = document.documentElement;
-const toggleBtn = document.getElementById("themeToggle");
-const toggleBtnMobile = document.getElementById("themeToggleMobile");
-
-// Load saved theme
-const savedTheme = localStorage.getItem("theme");
-
-function updateToggleIcons(theme) {
-    const icon = theme === "dark" ? "☀️" : "🌙";
-    if (toggleBtn) toggleBtn.innerHTML = icon;
-    if (toggleBtnMobile) toggleBtnMobile.innerHTML = icon;
-}
-
-if (savedTheme) {
-    root.setAttribute("data-theme", savedTheme);
-    updateToggleIcons(savedTheme);
-} else {
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    root.setAttribute("data-theme", prefersDark ? "dark" : "light");
-    updateToggleIcons(prefersDark ? "dark" : "light");
-}
-
-// Toggle theme function
-function toggleTheme() {
-    let current = root.getAttribute("data-theme");
-    let newTheme = current === "light" ? "dark" : "light";
-
-    root.setAttribute("data-theme", newTheme);
-    localStorage.setItem("theme", newTheme);
-    updateToggleIcons(newTheme);
-}
-
-// Add event listeners to both buttons
-if (toggleBtn) toggleBtn.addEventListener("click", toggleTheme);
-if (toggleBtnMobile) toggleBtnMobile.addEventListener("click", toggleTheme);
 
 // ===== ACTIVE NAV INDICATOR =====
 function updateActiveNavLink() {
