@@ -114,6 +114,7 @@ nav {
   top: 0;
   z-index: 1000;
   background: transparent;
+  background-color: transparent !important;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   transition: transform 0.3s ease, opacity 0.1s ease;
@@ -161,6 +162,15 @@ nav {
   text-decoration: underline;
   text-underline-offset: 1rem;
   text-decoration-color: #fbbf24;
+}
+
+/* Active state for desktop nav */
+#desktop-nav .nav-links a.active {
+  color: #fbbf24;
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-color: #fbbf24;
+  font-weight: 600;
 }
 
 .nav-links a {
@@ -324,6 +334,14 @@ a:hover {
   color: var(--text);
   text-decoration: none;
   transition: all 0.3 ease-in-out;
+}
+
+/* Active state for hamburger menu */
+.menu-links a.active {
+  color: #fbbf24;
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: #fbbf24;
 }
 
 .menu-links li {

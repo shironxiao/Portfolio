@@ -45,6 +45,12 @@ body::before {
     z-index: 1000;
 }
 
+#hamburger-nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
 /* Content wrapper for proper spacing */
 .page-content {
     position: relative;

@@ -1,7 +1,8 @@
 /* Straw Hat Crew Section Styles */
 #straw-hat-crew {
-    padding-top: 8vh;
-    min-height: 100vh;
+    padding-top: 12vh;
+    padding-bottom: 4rem;
+    min-height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -41,7 +42,7 @@
 .crew-image-container {
     width: 100%;
     text-align: center;
-    margin: 2rem auto 4rem auto;
+    margin: 2rem auto 2rem auto;
 }
 
 .crew-image {

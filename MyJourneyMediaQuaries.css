@@ -240,6 +240,214 @@
     }
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+
+    /* Hamburger Menu */
+    #desktop-nav {
+        display: none;
+    }
+
+    #hamburger-nav {
+        display: flex;
+        background: transparent !important;
+        background-color: transparent !important;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
+
+    /* Make hamburger nav logo visible */
+    #hamburger-nav .logo {
+        color: white;
+        font-weight: 600;
+    }
+
+    #hamburger-nav .logo img {
+        max-height: 40px;
+        width: auto;
+        object-fit: contain;
+    }
+
+    /* Theme toggle button in hamburger nav */
+    #hamburger-nav .theme-toggle {
+        position: absolute;
+        top: 1.5rem;
+        right: 5rem;
+    }
+
+    /* Hero Section - Image at top */
+    .hero-container {
+        flex-direction: column-reverse;
+    }
+
+    .journey-hero {
+        flex-direction: column;
+        padding: 3rem 1.5rem;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .hero-quote {
+        font-size: 1rem;
+    }
+
+    .hero-personal-quote {
+        font-size: 1rem;
+    }
+
+    /* Lessons Section - Image at top */
+    .lesson-article {
+        flex-direction: column-reverse;
+    }
+
+    .lesson-image-container {
+        order: -1;
+        max-width: 100%;
+    }
+
+    .lesson-quote {
+        font-size: 1rem;
+        padding: 1rem;
+        line-height: 1.6;
+        margin-top: 1.5rem;
+    }
+
+    .lessons-title {
+        font-size: 2rem;
+    }
+
+    .lesson-heading {
+        font-size: 1.5rem;
+    }
+
+    .lesson-text {
+        font-size: 1rem;
+    }
+
+    /* Journey Article Section - Image at top */
+    .journey-article {
+        flex-direction: column-reverse;
+    }
+
+    .journey-article-image-container {
+        order: -1;
+    }
+
+    .journey-article-title {
+        font-size: 2rem;
+    }
+
+    .journey-article-heading {
+        font-size: 1.5rem;
+    }
+
+    .journey-article-text {
+        font-size: 1rem;
+    }
+
+    .journey-article-image-container {
+        max-width: 100%;
+    }
+
+    /* Crew Section */
+    .crew-article {
+        flex-direction: column;
+    }
+
+    .crew-title {
+        font-size: 2rem;
+    }
+
+    .crew-heading {
+        font-size: 1.5rem;
+    }
+
+    .crew-text {
+        font-size: 1rem;
+    }
+
+    .crew-values {
+        justify-content: center;
+    }
+
+    /* Footer Responsive */
+    .onepiece-footer {
+        padding: 3rem 1.5rem 2rem;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+        align-items: center;
+    }
+
+    .footer-logo {
+        margin-bottom: 0.5rem;
+        width: 100%;
+    }
+
+    .footer-logo img {
+        max-width: 120px;
+        margin-bottom: 1rem;
+    }
+
+    .footer-tagline {
+        font-size: 0.9rem;
+        margin-bottom: 1.5rem;
+        line-height: 1.6;
+    }
+
+    .footer-nav {
+        margin-bottom: 1rem;
+        text-align: center;
+        width: 100%;
+    }
+
+    .footer-nav h3 {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    .footer-nav ul {
+        flex-direction: column;
+        gap: 0.8rem;
+        align-items: center;
+    }
+
+    .footer-socials {
+        text-align: center;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .footer-socials h3 {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    .footer-socials-icons {
+        justify-content: center;
+    }
+
+    .footer-copy {
+        font-size: 0.85rem;
+        padding-top: 1.5rem;
+        margin-top: 1rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        width: 100%;
+        line-height: 1.6;
+    }
+}
+
 /* Very Small Devices */
 @media screen and (max-width: 360px) {
     .hero-title {

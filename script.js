@@ -29,26 +29,35 @@ document.addEventListener('keydown', function (e) {
 
 // ===== ACTIVE NAV INDICATOR =====
 function updateActiveNavLink() {
-    // Get all nav links
-    const navLinks = document.querySelectorAll('.nav-links a');
+    // Get all nav links (desktop nav, hamburger menu, and footer)
+    const desktopNavLinks = document.querySelectorAll('#desktop-nav .nav-links a');
+    const hamburgerNavLinks = document.querySelectorAll('#hamburger-nav .menu-links a');
+    const footerNavLinks = document.querySelectorAll('.footer-nav a');
 
     // Get current page filename
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
 
-    // Update active link styling based on current page
-    navLinks.forEach(link => {
-        link.classList.remove('active');
+    // Function to update links in a collection
+    function updateLinks(links) {
+        links.forEach(link => {
+            link.classList.remove('active');
 
-        // Get the href attribute
-        const href = link.getAttribute('href');
+            // Get the href attribute
+            const href = link.getAttribute('href');
 
-        // Check if this link matches the current page
-        if (href === currentPage ||
-            (currentPage === '' && href === 'index.html') ||
-            (currentPage === 'index.html' && href === 'index.html')) {
-            link.classList.add('active');
-        }
-    });
+            // Check if this link matches the current page
+            if (href === currentPage ||
+                (currentPage === '' && href === 'index.html') ||
+                (currentPage === 'index.html' && href === 'index.html')) {
+                link.classList.add('active');
+            }
+        });
+    }
+
+    // Update all navigation areas
+    updateLinks(desktopNavLinks);
+    updateLinks(hamburgerNavLinks);
+    updateLinks(footerNavLinks);
 }
 
 // Update active link on page load
