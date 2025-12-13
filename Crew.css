@@ -1,0 +1,104 @@
+/* Straw Hat Crew Section Styles */
+#straw-hat-crew {
+    padding-top: 8vh;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.crew-content {
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 2rem;
+    text-align: center;
+}
+
+.crew-content .title {
+    font-size: 5rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.blue-text {
+    color: #3B82F6;
+}
+
+.gold-text {
+    color: #fbbf24;
+}
+
+.crew-description {
+    font-size: 2rem;
+    line-height: 1.8;
+    color: #FFFFFF;
+    text-align: center;
+    margin: 0 auto 3rem auto;
+    font-weight: 700;
+    max-width: 900px;
+}
+
+.crew-image-container {
+    width: 100%;
+    text-align: center;
+    margin: 2rem auto 4rem auto;
+}
+
+.crew-image {
+    max-width: 90%;
+    width: 1000px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    .crew-content .title {
+        font-size: 4rem;
+    }
+
+    .crew-description {
+        font-size: 1.8rem;
+    }
+
+    .crew-image {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #straw-hat-crew {
+        padding-top: 12vh;
+    }
+
+    .crew-content .title {
+        font-size: 3rem;
+    }
+
+    .crew-description {
+        font-size: 1.5rem;
+        padding: 0 1rem;
+    }
+
+    .crew-image {
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .crew-content .title {
+        font-size: 2.5rem;
+    }
+
+    .crew-description {
+        font-size: 1.2rem;
+    }
+
+    .crew-image {
+        width: 100%;
+    }
+}

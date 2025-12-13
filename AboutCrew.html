@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crew - My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="pages-common.css" />
+    <link rel="stylesheet" href="Crew.css" />
+    <link rel="stylesheet" href="footer-styles.css" />
+    <link rel="stylesheet" href="CrewMediaQuaries.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+    <nav id="desktop-nav">
+        <div class="logo"><img src="./assets/OnePieceLogo.png" alt="One Piece Logo" /></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="AboutLuffy.html">Luffy</a></li>
+            <li><a href="AboutCrew.html">Crew</a></li>
+            <li><a href="AboutDevilsFruits.html">Devils Fruits</a></li>
+            <li><a href="MyJourney.html">MyJourney</a></li>
+        </ul>
+    </nav>
+    <nav id="hamburger-nav">
+        <div class="logo">Ronald</div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <ul>
+                    <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
+                    <li><a href="AboutLuffy.html" onclick="toggleMenu()">Luffy</a></li>
+                    <li><a href="AboutCrew.html" onclick="toggleMenu()">Crew</a></li>
+                    <li><a href="AboutDevilsFruits.html" onclick="toggleMenu()">Devils Fruits</a></li>
+                    <li><a href="MyJourney.html" onclick="toggleMenu()">MyJourney</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Crew Section -->
+    <section id="straw-hat-crew">
+        <div class="crew-content">
+            <h1 class="title"><span class="blue-text">Straw Hat</span> <span class="gold-text">Pirates</span></h1>
+            <p class="crew-description">
+                Meet the legendary crew that will help Luffy become the King of Pirates!
+            </p>
+            <div class="crew-image-container">
+                <img src="./assets/LuffyCrew.jpg" alt="Straw Hat Pirates Crew" class="crew-image" />
+            </div>
+        </div>
+    </section>
+
+    <footer class="onepiece-footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="./assets/OnePieceLogo.png" alt="One Piece Logo" />
+                <p class="footer-tagline">
+                    Sailing the Grand Line with the Straw Hat Pirates 🏴‍☠️
+                </p>
+            </div>
+
+            <nav class="footer-nav">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="AboutLuffy.html">Luffy</a></li>
+                    <li><a href="AboutCrew.html">Crew</a></li>
+                    <li><a href="AboutDevilsFruits.html">Devil Fruits</a></li>
+                    <li><a href="MyJourney.html">My Journey</a></li>
+                </ul>
+            </nav>
+
+            <div class="footer-socials">
+                <h3>Connect</h3>
+                <div class="footer-socials-icons">
+                    <a href="https://github.com/shironxiao" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.facebook.com/shiron08/" aria-label="Facebook">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://www.instagram.com/sh_i_ron" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+
+            <p class="footer-copy">
+                © 2025 Ronald • This is a fan-made website. One Piece is owned by Eiichiro Oda, Shueisha, and Toei
+                Animation.
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

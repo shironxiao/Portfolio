@@ -233,3 +233,80 @@ document.addEventListener('keydown', function (e) {
         closeImageFullscreen();
     }
 });
+
+// ===== DYNAMIC NAV COLOR CHANGE BASED ON SECTION =====
+document.addEventListener('DOMContentLoaded', function () {
+    const desktopNav = document.getElementById('desktop-nav');
+
+    if (!desktopNav) return;
+
+    // Sections with light backgrounds that need dark text
+    const lightSections = [
+        document.querySelector('section[id="Set Sail for Adventure"]'),
+        document.querySelector('article[id="Gomu Gomu Fruits"]')
+    ].filter(section => section !== null);
+
+    function updateNavColor() {
+        // Get the nav position
+        const navBottom = desktopNav.getBoundingClientRect().bottom;
+
+        // Check if any light section is currently overlapping with the nav
+        let isOverLightSection = false;
+
+        lightSections.forEach(section => {
+            const rect = section.getBoundingClientRect();
+            // Check if section is in the viewport and overlapping with nav area
+            if (rect.top < navBottom && rect.bottom > 0) {
+                isOverLightSection = true;
+            }
+        });
+
+        // Update nav class based on current section
+        if (isOverLightSection) {
+            desktopNav.classList.add('nav-dark-text');
+        } else {
+            desktopNav.classList.remove('nav-dark-text');
+        }
+    }
+
+    // Update on scroll
+    let scrollTimeout;
+    window.addEventListener('scroll', function () {
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(updateNavColor, 10);
+    });
+
+    // Initial check
+    updateNavColor();
+});
+
+// ===== CREW MEMBERS CARDS GENERATION =====
+document.addEventListener('DOMContentLoaded', function () {
+    const crewMembersGrid = document.getElementById('crewMembersGrid');
+
+    if (!crewMembersGrid) return;
+
+    const crewMembers = [
+        { name: 'Monkey D. Luffy', position: 'Captain', icon: '👑' },
+        { name: 'Roronoa Zoro', position: 'Swordsman', icon: '⚔️' },
+        { name: 'Nami', position: 'Navigator', icon: '🧭' },
+        { name: 'Usopp', position: 'Sniper', icon: '🎯' },
+        { name: 'Sanji', position: 'Cook', icon: '👨‍🍳' },
+        { name: 'Tony Tony Chopper', position: 'Doctor', icon: '🩺' },
+        { name: 'Nico Robin', position: 'Archaeologist', icon: '📚' },
+        { name: 'Franky', position: 'Shipwright', icon: '🔧' },
+        { name: 'Brook', position: 'Musician', icon: '🎸' },
+        { name: 'Jinbe', position: 'Helmsman', icon: '🌊' }
+    ];
+
+    crewMembers.forEach(member => {
+        const card = document.createElement('div');
+        card.className = 'crew-card';
+        card.innerHTML = `
+            <div class="crew-icon">${member.icon}</div>
+            <h3 class="crew-name">${member.name}</h3>
+            <p class="crew-position">${member.position}</p>
+        `;
+        crewMembersGrid.appendChild(card);
+    });
+});

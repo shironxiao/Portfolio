@@ -109,7 +109,6 @@ nav {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background-color: var(--bg);
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
@@ -117,7 +116,6 @@ nav {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background-color: var(--bg);
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
@@ -437,6 +435,151 @@ section {
   height: 380px;
   width: 380px;
   border-radius: 1.5rem;
+}
+
+/* Section 1: About Luffy Custom Styles */
+#about-luffy {
+  padding-top: 8vh;
+}
+
+#about-luffy .title {
+  font-size: 5rem;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.blue-text {
+  color: #3B82F6;
+}
+
+.gold-text {
+  color: #fbbf24;
+}
+
+.luffy-description {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  color: white;
+  text-align: left;
+  margin-top: 0.5rem;
+}
+
+.luffy-image-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.luffy-main-image {
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+}
+
+/* Section 2: Luffy's Journey Custom Styles */
+#luffy-journey {
+  padding-top: 8vh;
+}
+
+#luffy-journey .section-container {
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+.luffy-poster-image {
+  width: 500px;
+  height: auto;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.luffy-journey-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#luffy-journey .title {
+  font-size: 5rem;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.journey-description {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  color: white;
+  text-align: left;
+  margin: 0;
+}
+
+/* Article: Gear Fifth Custom Styles */
+#gear-fifth {
+  padding-top: 8vh;
+}
+
+#gear-fifth .section-container {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
+.gear-fifth-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#gear-fifth .title {
+  font-size: 5rem;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.gear-description {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  color: white;
+  text-align: left;
+  margin: 0;
+}
+
+.gear-fifth-image {
+  width: 600px;
+  height: auto;
+  object-fit: cover;
+  flex-shrink: 0;
+
+}
+
+.luffy-quote {
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.luffy-quote .quote-text {
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-style: italic;
+  color: #fbbf24;
+  margin: 0 0 0.5rem 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  white-space: nowrap;
+}
+
+.luffy-quote .quote-author {
+  font-size: 1.1rem;
+  color: white;
+  margin: 0;
+  font-style: italic;
+  text-align: center;
 }
 
 /* Styles for the "What i do" intro text (added) */

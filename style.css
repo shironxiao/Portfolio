@@ -72,12 +72,16 @@
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap");
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Nunito", sans-serif;
   background-color: var(--bg);
   color: var(--text);
   transition: background 0.3s ease, color 0.3s ease;
+  margin: 0;
+  padding: 0;
 }
 
 p {
@@ -104,13 +108,16 @@ nav {
   height: 10vh;
 }
 
-/* Sticky nav positioning */
+/* Desktop nav positioning */
 #desktop-nav {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background-color: var(--bg);
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  background: transparent;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, opacity 0.1s ease;
+  padding: 0 2rem;
 }
 
 #hamburger-nav {
@@ -141,6 +148,19 @@ nav {
   gap: 2rem;
   list-style: none;
   font-size: 1.5rem;
+}
+
+#desktop-nav .nav-links a {
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+#desktop-nav .nav-links a:hover {
+  color: #fbbf24;
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-color: #fbbf24;
 }
 
 .nav-links a {
@@ -178,65 +198,84 @@ a:hover {
   text-decoration-color: var(--accent);
 }
 
+#desktop-nav .logo {
+  font-size: 2rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  margin-left: 0;
+}
+
+/* Dark text for nav when over light backgrounds */
+#desktop-nav.nav-dark-text .nav-links a {
+  color: #1F2937;
+}
+
+#desktop-nav.nav-dark-text .nav-links a:hover {
+  color: #2563eb;
+  text-decoration-color: #2563eb;
+}
+
+#desktop-nav.nav-dark-text .logo {
+  color: #1F2937;
+}
+
+/* Smooth color transitions */
+#desktop-nav .nav-links a,
+#desktop-nav .logo {
+  transition: color 0.3s ease;
+}
+
 .logo {
   font-size: 2rem;
   color: var(--text);
+  display: flex;
+  align-items: center;
+  margin-left: 2rem;
+}
+
+.logo img {
+  max-height: 50px;
+  width: auto;
+  object-fit: contain;
 }
 
 .logo:hover {
   cursor: default;
 }
 
-/* THEME TOGGLE BUTTON */
-.theme-toggle {
-  background: none;
-  border: none;
-  color: var(--text);
-  padding: 8px 12px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 18px;
-  transition: 0.3s;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.theme-toggle:hover {
-  background: var(--accent);
-  color: var(--bg);
-}
-
-.theme-toggle:active {
-  transform: scale(0.95);
-}
+/* THEME TOGGLE REMOVED */
 
 .btn-color-1,
 .btn-color-2 {
-  border: var(--border) 0.1rem solid;
-  color: var(--text);
+  border: 0.1rem solid;
   transition: all 0.3s ease;
 }
 
 .btn-color-1 {
-  background: var(--text);
-  color: var(--bg);
+  background: #3B82F6;
+  color: white;
+  border-color: #3B82F6;
 }
 
 .btn-color-2 {
-  background: none;
+  background: #fbbf24;
+  color: #1F2937;
+  border-color: #fbbf24;
 }
 
 .btn-color-1:hover {
-  background: var(--accent);
-  color: var(--bg);
-  border-color: var(--accent);
+  background: #2563EB;
+  color: white;
+  border-color: #2563EB;
+  transform: scale(1.05);
 }
 
 .btn-color-2:hover {
-  border-color: var(--accent);
-  background: var(--accent);
-  color: var(--bg);
+  background: #f59e0b;
+  color: #1F2937;
+  border-color: #f59e0b;
+  transform: scale(1.05);
 }
 
 /* HAMBURGER MENU */
@@ -338,8 +377,87 @@ section {
 #profile {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 5rem;
-  height: 80vh;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: -10vh 0 0 0;
+  padding: 0 10rem;
+
+  box-sizing: border-box;
+  background-image: url('./assets/OceanBackground.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#profile::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+.profile-content {
+  text-align: center;
+  max-width: 800px;
+  color: white;
+  position: relative;
+  z-index: 1;
+}
+
+.profile-logo {
+  max-width: 700px;
+  width: 100%;
+  height: auto;
+  margin-bottom: .01rem;
+}
+
+.profile-title {
+  font-size: 5rem;
+  font-family: "Bangers", sans-serif;
+  margin-bottom: 1.5rem;
+  color: white;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+  font-weight: bold;
+}
+
+.blue-text {
+  color: #3B82F6;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.gold-text {
+  color: #fbbf24;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.profile-description {
+  font-size: 1.5rem;
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.profile-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.profile-buttons .btn {
+  font-size: 1.1rem;
+  padding: 1.2rem 2rem;
+  width: auto;
+  min-width: 150px;
 }
 
 .section__pic-container {
@@ -393,7 +511,8 @@ section {
 
 .title {
   font-size: 3rem;
-  font-family: "Anton", sans-serif;
+  font-family: "Bangers", sans-serif;
+  font-weight: bold;
   text-align: center;
   color: var(--text);
 }
@@ -453,6 +572,189 @@ section[id="What i do"] .intro-text-container .section__text__p2 {
   line-height: 1.65;
   margin-bottom: 1rem;
 }
+
+/* SET SAIL FOR ADVENTURE SECTION */
+
+section[id="Set Sail for Adventure"] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 0;
+  min-height: 100vh;
+}
+
+section[id="Set Sail for Adventure"] .title {
+  margin-bottom: 4rem;
+}
+
+.adventure-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  max-width: 1400px;
+  width: 100%;
+  padding: 0 2rem;
+}
+
+.adventure-card {
+  background: var(--card-bg);
+  border: 2px solid var(--border);
+  border-radius: 20px;
+  padding: 3rem 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.adventure-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  border-color: var(--accent);
+}
+
+.card-icon {
+  font-size: 4rem;
+  margin-bottom: 0.5rem;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+.card-title {
+  font-size: 2rem;
+  font-family: "Bangers", sans-serif;
+  font-weight: bold;
+  color: var(--text);
+  margin: 0;
+}
+
+.card-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--muted-text);
+  margin: 0;
+  flex-grow: 1;
+}
+
+.adventure-card .btn {
+  margin-top: auto;
+  width: 100%;
+  max-width: 200px;
+}
+
+/* Styles for the "Me as a One Piece Character" section */
+section[id="Me as a One Piece Character"] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: .01rem 0 4rem 0;
+  min-height: 100vh;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  background-image: url('./assets/OceanPhoto.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+section[id="Me as a One Piece Character"]::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+section[id="Me as a One Piece Character"] .title {
+  margin-bottom: 1.5rem;
+  margin-top: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.onepiece-container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1400px;
+  width: 100%;
+  padding: 0 2rem;
+}
+
+.onepiece-card {
+  position: relative;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 3rem 4rem;
+  max-width: 800px;
+  width: 90%;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.onepiece-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.4);
+}
+
+/* Dark mode adjustments for the card */
+:root[data-theme="dark"] .onepiece-card {
+  background: rgba(30, 41, 59, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.onepiece-description .section__text__p2 {
+  font-size: 1.5rem;
+  line-height: 1.8;
+  text-align: left;
+  color: var(--text);
+}
+
+.quote-text {
+  font-size: 2.5rem !important;
+  font-weight: 600 !important;
+  font-style: italic !important;
+  margin-bottom: 2rem !important;
+  color: #fbbf24 !important;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  text-align: left !important;
+}
+
+.onepiece-button-container {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.onepiece-button-container .btn {
+  width: auto;
+  padding: 1rem 2rem;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+  transition: all 0.3s ease;
+}
+
+.onepiece-button-container .btn:hover {
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.5);
+  transform: translateY(-2px);
+}
+
 
 /* Responsive styles for "What i do" section */
 @media (max-width: 900px) {

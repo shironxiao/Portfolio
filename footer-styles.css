@@ -1,0 +1,262 @@
+/* ONE PIECE FOOTER STYLES */
+
+.onepiece-footer {
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    position: relative;
+    overflow: hidden;
+    margin-top: 4rem;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    padding: 4rem 0 2rem 0;
+}
+
+/* Footer Container with Grid Layout */
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.footer-logo {
+    text-align: left;
+}
+
+.footer-logo img {
+    width: 160px;
+    height: auto;
+    margin-bottom: 1rem;
+    filter: drop-shadow(0 4px 8px rgba(251, 191, 36, 0.3));
+    transition: transform 0.3s ease;
+}
+
+.footer-logo img:hover {
+    transform: scale(1.05);
+}
+
+.footer-tagline {
+    font-size: 1rem;
+    color: #fbbf24;
+    font-weight: 500;
+    margin: 0;
+    letter-spacing: 0.5px;
+    line-height: 1.6;
+}
+
+.footer-nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-nav h3 {
+    color: white;
+    font-size: 1.3rem;
+    margin: 0 0 1.5rem 0;
+    font-weight: 600;
+}
+
+.footer-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.footer-nav li {
+    margin: 0;
+}
+
+.footer-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 400;
+    position: relative;
+    transition: color 0.3s ease, padding-left 0.3s ease;
+    display: inline-block;
+    opacity: 0.9;
+}
+
+.footer-nav a:hover {
+    color: #fbbf24;
+    padding-left: 8px;
+    opacity: 1;
+}
+
+.footer-nav a::before {
+    content: "→";
+    position: absolute;
+    left: -20px;
+    opacity: 0;
+    transition: opacity 0.3s ease, left 0.3s ease;
+    color: #fbbf24;
+}
+
+.footer-nav a:hover::before {
+    opacity: 1;
+    left: -12px;
+}
+
+.footer-socials {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-socials h3 {
+    color: white;
+    font-size: 1.3rem;
+    margin: 0 0 1.5rem 0;
+    font-weight: 600;
+}
+
+.footer-socials-icons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.footer-socials a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.15);
+    border: 2px solid #fbbf24;
+    color: #fbbf24;
+    font-size: 1.3rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.footer-socials a:hover {
+    background: #fbbf24;
+    color: #2563eb;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(251, 191, 36, 0.4);
+}
+
+.footer-copy {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+    margin: 0;
+    margin-top: 3rem;
+    padding-top: 0;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2.5rem;
+    }
+
+    .footer-logo {
+        grid-column: 1 / -1;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .footer-logo img {
+        width: 140px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .onepiece-footer {
+        padding: 3rem 0 1.5rem 0;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .footer-logo {
+        text-align: center;
+    }
+
+    .footer-logo img {
+        width: 130px;
+    }
+
+    .footer-tagline {
+        font-size: 0.95rem;
+    }
+
+    .footer-nav,
+    .footer-socials {
+        text-align: left;
+    }
+
+    .footer-nav h3,
+    .footer-socials h3 {
+        font-size: 1.2rem;
+    }
+
+    .footer-nav a {
+        font-size: 0.95rem;
+    }
+
+    .footer-socials a {
+        width: 42px;
+        height: 42px;
+        font-size: 1.2rem;
+    }
+
+    .footer-copy {
+        font-size: 0.85rem;
+        padding-top: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .onepiece-footer {
+        padding: 2rem 0 1rem 0;
+    }
+
+    .footer-container {
+        gap: 2rem;
+    }
+
+    .footer-logo img {
+        width: 110px;
+    }
+
+    .footer-tagline {
+        font-size: 0.85rem;
+    }
+
+    .footer-nav h3,
+    .footer-socials h3 {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+    }
+
+    .footer-nav ul {
+        gap: 0.8rem;
+    }
+
+    .footer-nav a {
+        font-size: 0.9rem;
+    }
+
+    .footer-socials a {
+        width: 38px;
+        height: 38px;
+        font-size: 1.1rem;
+    }
+
+    .footer-copy {
+        font-size: 0.75rem;
+    }
+}

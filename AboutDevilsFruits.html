@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Devils Fruits - My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="pages-common.css" />
+    <link rel="stylesheet" href="AboutDevilsFruits.css" />
+    <link rel="stylesheet" href="footer-styles.css" />
+    <link rel="stylesheet" href="AboutDevilsFruitsMediaQuaries.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+    <nav id="desktop-nav">
+        <div class="logo"><img src="./assets/OnePieceLogo.png" alt="One Piece Logo" /></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="AboutLuffy.html">Luffy</a></li>
+            <li><a href="AboutCrew.html">Crew</a></li>
+            <li><a href="AboutDevilsFruits.html">Devils Fruits</a></li>
+            <li><a href="MyJourney.html">MyJourney</a></li>
+        </ul>
+    </nav>
+    <nav id="hamburger-nav">
+        <div class="logo">Ronald</div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <ul>
+                    <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
+                    <li><a href="AboutLuffy.html" onclick="toggleMenu()">Luffy</a></li>
+                    <li><a href="AboutCrew.html" onclick="toggleMenu()">Crew</a></li>
+                    <li><a href="AboutDevilsFruits.html" onclick="toggleMenu()">Devils Fruits</a></li>
+                    <li><a href="MyJourney.html" onclick="toggleMenu()">MyJourney</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Devil Fruits Section -->
+    <section id="devil-fruits-hero">
+        <div class="fruits-content">
+            <h1 class="title"><span class="blue-text">Devil</span> <span class="gold-text">Fruits</span></h1>
+            <p class="fruits-description">
+                Mysterious fruits that grant incredible powers at the cost of the ability to swim.
+                Each fruit is unique and can only exist once in the world at a time!
+                Those who consume them are cursed by the sea and will sink like a hammer in water.
+                However, the extraordinary abilities they provide make them highly sought after by pirates and marines
+                alike!
+            </p>
+        </div>
+    </section>
+    <!-- Devil Fruit Types Section -->
+    <section id="fruit-types">
+        <div class="types-content">
+            <h2 class="section-title"><span class="blue-text">Types of</span> <span class="gold-text">Devil
+                    Fruits</span></h2>
+            <div class="types-grid">
+                <div class="type-card">
+                    <div class="type-icon">🍎</div>
+                    <h3 class="type-name">Paramecia</h3>
+                    <p class="type-description">
+                        The most common type. Grants superhuman abilities or alters the user's body.
+                        Examples: Gomu Gomu no Mi (Rubber), Bara Bara no Mi (Chop-Chop).
+                    </p>
+                </div>
+                <div class="type-card">
+                    <div class="type-icon">🐉</div>
+                    <h3 class="type-name">Zoan</h3>
+                    <p class="type-description">
+                        Allows the user to transform into an animal or hybrid form.
+                        Examples: Hito Hito no Mi (Human), Inu Inu no Mi (Dog).
+                    </p>
+                </div>
+                <div class="type-card">
+                    <div class="type-icon">🔥</div>
+                    <h3 class="type-name">Logia</h3>
+                    <p class="type-description">
+                        The rarest type. Grants the power to transform into natural elements and become intangible.
+                        Examples: Mera Mera no Mi (Fire), Goro Goro no Mi (Lightning).
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mera Mera no Mi Section -->
+    <section id="mera-mera-fruit">
+        <div class="mera-content">
+            <h2 class="section-title"><span class="gold-text">Mera Mera no Mi</span></h2>
+            <div class="mera-layout">
+                <div class="mera-image-container">
+                    <img src="./assets/MeraMera.png" alt="Mera Mera no Mi - Flame-Flame Fruit" class="mera-image" />
+                </div>
+                <div class="mera-info">
+                    <h3 class="mera-subtitle">The Flame-Flame Fruit</h3>
+                    <p class="mera-text">
+                        The Mera Mera no Mi is a Logia-type Devil Fruit that allows the user to create, control, and
+                        transform into fire at will, making them a Fire Human. This legendary fruit was once wielded by
+                        Portgas D. Ace, and later inherited by Sabo, Luffy's sworn brother.
+                    </p>
+                    <p class="mera-text">
+                        <strong>Abilities:</strong> Complete fire manipulation, immunity to fire and heat, ability to
+                        fly
+                        using flames, intangibility against physical attacks, and devastating fire-based techniques like
+                        Fire Fist and Flame Emperor!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ope Ope no Mi Section -->
+    <section id="ope-ope-fruit">
+        <div class="ope-content">
+            <h2 class="section-title"><span class="gold-text">Ope Ope no Mi</span></h2>
+            <div class="ope-layout">
+                <div class="ope-image-container">
+                    <img src="./assets/OpeOpe.png" alt="Ope Ope no Mi - Op-Op Fruit" class="ope-image" />
+                </div>
+                <div class="ope-info">
+                    <h3 class="ope-subtitle">The Op-Op Fruit</h3>
+                    <p class="ope-text">
+                        The Ope Ope no Mi is a Paramecia-type Devil Fruit that grants the ability to create a spherical
+                        territory where the user can manipulate anything within it. This fruit is wielded by Trafalgar
+                        D. Water Law,
+                        the Surgeon of Death, and is considered the "Ultimate Devil Fruit" worth 5 billion berries!
+                    </p>
+                    <p class="ope-text">
+                        <strong>Abilities:</strong> Spatial manipulation within the ROOM, ability to swap objects and
+                        people,
+                        perform miraculous surgeries, cut anything without harming it, and even grant eternal youth
+                        through
+                        the Perennial Youth Operation (at the cost of the user's life)!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="onepiece-footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="./assets/OnePieceLogo.png" alt="One Piece Logo" />
+                <p class="footer-tagline">
+                    Sailing the Grand Line with the Straw Hat Pirates 🏴‍☠️
+                </p>
+            </div>
+
+            <nav class="footer-nav">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="AboutLuffy.html">Luffy</a></li>
+                    <li><a href="AboutCrew.html">Crew</a></li>
+                    <li><a href="AboutDevilsFruits.html">Devil Fruits</a></li>
+                    <li><a href="MyJourney.html">My Journey</a></li>
+                </ul>
+            </nav>
+
+            <div class="footer-socials">
+                <h3>Connect</h3>
+                <div class="footer-socials-icons">
+                    <a href="https://github.com/shironxiao" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.facebook.com/shiron08/" aria-label="Facebook">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://www.instagram.com/sh_i_ron" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+
+            <p class="footer-copy">
+                © 2025 Ronald • This is a fan-made website. One Piece is owned by Eiichiro Oda, Shueisha, and Toei
+                Animation.
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

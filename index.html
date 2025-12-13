@@ -8,31 +8,28 @@
   <title>My Portfolio</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="mediaquaries.css" />
+  <link rel="stylesheet" href="gomu-gomu-styles.css" />
+  <link rel="stylesheet" href="footer-styles.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 
 <body>
   <nav id="desktop-nav">
-    <div class="logo">Ronald</div>
+    <div class="logo"><img src="./assets/OnePieceLogo.png" alt="One Piece Logo" /></div>
     <div style="display: flex; align-items: center; gap: 2rem;">
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
-        <li><a href="About.html">About</a></li>
-        <li><a href="Skills.html">Skills</a></li>
-        <li><a href="Project.html">Projects</a></li>
-        <li><a href="Contact.html">Contact</a></li>
+        <li><a href="AboutLuffy.html">Luffy</a></li>
+        <li><a href="AboutCrew.html">Crew</a></li>
+        <li><a href="AboutDevilsFruits.html">Devils Fruits</a></li>
+        <li><a href="MyJourney.html">MyJourney</a></li>
+
       </ul>
-      <button id="themeToggle" class="theme-toggle" aria-label="Toggle Light/Dark Mode">
-        <span class="toggle-icon">🌙</span>
-      </button>
     </div>
 
   </nav>
   <nav id="hamburger-nav">
     <div class="logo">Ronald</div>
-    <button id="themeToggleMobile" class="theme-toggle" aria-label="Toggle Light/Dark Mode">
-      <span class="toggle-icon">🌙</span>
-    </button>
     <div class="hamburger-menu">
       <div class="hamburger-icon" onclick="toggleMenu()">
         <span></span>
@@ -42,75 +39,130 @@
       <div class="menu-links">
         <ul>
           <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
-          <li><a href="About.html" onclick="toggleMenu()">About</a></li>
-          <li><a href="Skills.html" onclick="toggleMenu()">Skills</a></li>
-          <li><a href="Project.html" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="Contact.html" onclick="toggleMenu()">Contact</a></li>
+          <li><a href="AboutLuffy.html" onclick="toggleMenu()">Luffy</a></li>
+          <li><a href="AboutCrew.html" onclick="toggleMenu()">Crew</a></li>
+          <li><a href="AboutDevilsFruits.html" onclick="toggleMenu()">Devils Fruits</a></li>
+
         </ul>
       </div>
     </div>
   </nav>
   <section id="profile">
-    <div class="section__pic-container">
-      <img src="./assets/circle.png" alt="Ronald Sevilla profile picture" />
-    </div>
-    <div class="section__text">
-      <p class="section__text__p1">Hello, I'm</p>
-      <h1 class="title">Ronald Sevilla</h1>
-      <p class="section__text__p2"> IT Student Developer</p>
-      <div class="btn-container">
-        <button class="btn btn-color-1" onclick="location.href=' Contact.html'">
-          Contact Info
-        </button>
+    <div class="profile-content">
+      <img src="./assets/OnePieceLogo.png" alt="One Piece Logo" class="profile-logo" />
+      <h1 class="profile-title"><span class="blue-text">Straw Hat</span> <span class="gold-text">Pirates</span></h1>
+      <p class="profile-description">
+        Join the adventure with Monkey D. Luffy and the Straw Hat crew as they sail the Grand Line in search of the
+        legendary One Piece treasure!
+      </p>
+      <div class="profile-buttons">
+        <button class="btn btn-color-1">Meet Luffy</button>
+        <button class="btn btn-color-2">Meet the Crew</button>
       </div>
     </div>
   </section>
-  <section id="What i do">
-    <div class="intro-text-container">
-      <p class="title">What I Do as a Beginner Developer</p>
-      <p class="section__text__p2">
-        I'm a beginner backend developer who enjoys working with server-side
-        logic, data handling, and the hidden parts of applications that make
-        everything function smoothly. I'm learning how to break down complex
-        problems and turn them into simple, efficient solutions that support
-        the overall performance of a project. The more I explore backend
-        concepts, the more excited I become about understanding how systems
-        connect and operate behind the scenes.
-      </p>
-      <p class="section__text__p2">
-        I focus on building basic APIs, managing databases, and improving my
-        skills through hands-on projects and continuous learning. Every new
-        challenge helps me grow, whether it's debugging issues, organizing
-        data, or experimenting with different backend tools and frameworks.
-        With each step, I'm becoming more confident in creating reliable
-        backend features and shaping my path as a backend developer.
-      </p>
+  <section id="Set Sail for Adventure">
+    <p class="title"><span class="blue-text">Set Sail for</span> <span class="gold-text">Adventure!</span></p>
+    <div class="adventure-container">
+      <div class="adventure-card">
+        <div class="card-icon">🏴‍☠️</div>
+        <h3 class="card-title">Meet Luffy</h3>
+        <p class="card-description">
+          Discover the journey of Monkey D. Luffy, the aspiring Pirate King with the power of the Gum-Gum Fruit.
+        </p>
+        <button class="btn btn-color-1" onclick="location.href='AboutLuffy.html'">Explore</button>
+      </div>
+
+      <div class="adventure-card">
+        <div class="card-icon">⚓</div>
+        <h3 class="card-title">The Crew</h3>
+        <p class="card-description">
+          Meet the Straw Hat Pirates - a diverse crew of talented individuals united by friendship and dreams.
+        </p>
+        <button class="btn btn-color-1" onclick="location.href='AboutCrew.html'">Explore</button>
+      </div>
+
+      <div class="adventure-card">
+        <div class="card-icon">🍎</div>
+        <h3 class="card-title">Devil Fruits</h3>
+        <p class="card-description">
+          Uncover the mysterious Devil Fruits that grant incredible powers at the cost of swimming ability.
+        </p>
+        <button class="btn btn-color-1" onclick="location.href='AboutDevilsFruits.html'">Explore</button>
+      </div>
     </div>
   </section>
-  <footer>
-    <div id="socials-container">
-      <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon"
-        onclick="location.href='https://www.linkedin.com/in/ronald-sevilla-124081190/'" />
-      <img src="./assets/github.png" alt="My Github profile" class="icon"
-        onclick="location.href='https://github.com/shironxiao/shironxiao'" />
-      <img src="./assets/facebook.png" alt="My facebook profile" class="icon"
-        onclick="location.href='https://www.facebook.com/shiron08/'" />
-      <img src="./assets/instagram.png" alt="My instagram profile" class="icon"
-        onclick="location.href='https://https://www.instagram.com/sh_i_ron'" />
+
+  <section id="Me as a One Piece Character">
+    <p class="title"><span class="blue-text">My Journey on the</span> <span class="gold-text">Grand Line</span></p>
+    <div class="onepiece-container">
+      <div class="onepiece-card">
+        <p class="section__text__p2 quote-text">
+          "Someday, I'll find my own One Piece, no matter how rough the seas get."
+        </p>
+        <div class="onepiece-button-container">
+          <button class="btn btn-color-1">Get to Know More</button>
+        </div>
+      </div>
     </div>
-    <nav>
-      <div class="nav-links-container">
-        <ul class="nav-links">
+  </section>
+  <article id="Gomu Gomu Fruits">
+    <p class="title"><span class="blue-text">Gomu Gomu</span> <span class="gold-text">no Mi</span></p>
+    <div class="fruits-container">
+      <div class="fruit-card">
+        <img src="./assets/GumGum.png" alt="Gomu Gomu no Mi Devil Fruit" class="fruit-image" />
+        <div class="fruit-content">
+          <h2 class="fruit-title">The Gum-Gum Fruit</h2>
+          <p class="fruit-description">
+            The Gomu Gomu no Mi is a Paramecia-type Devil Fruit that grants the user's body the properties of rubber,
+            making them a <strong>Rubber Human</strong>. This fruit was consumed by Monkey D. Luffy, the captain of the
+            Straw Hat Pirates.
+          </p>
+        </div>
+      </div>
+    </div>
+  </article>
+  <footer class="onepiece-footer">
+    <div class="footer-container">
+      <div class="footer-logo">
+        <img src="./assets/OnePieceLogo.png" alt="One Piece Logo" />
+        <p class="footer-tagline">
+          Sailing the Grand Line with the Straw Hat Pirates 🏴‍☠️
+        </p>
+      </div>
+
+      <nav class="footer-nav">
+        <h3>Quick Links</h3>
+        <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="About.html">About</a></li>
-          <li><a href="Skills.html">Skills</a></li>
-          <li><a href="Project.html">Projects</a></li>
-          <li><a href="Contact.html">Contact</a></li>
+          <li><a href="AboutLuffy.html">Luffy</a></li>
+          <li><a href="AboutCrew.html">Crew</a></li>
+          <li><a href="AboutDevilsFruits.html">Devil Fruits</a></li>
+          <li><a href="MyJourney.html">My Journey</a></li>
         </ul>
+      </nav>
+
+      <div class="footer-socials">
+        <h3>Connect</h3>
+        <div class="footer-socials-icons">
+          <a href="https://github.com/shironxiao" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.facebook.com/shiron08/" aria-label="Facebook">
+            <i class="fab fa-facebook"></i>
+          </a>
+          <a href="https://www.instagram.com/sh_i_ron" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
       </div>
-    </nav>
-    <p class="copyright">© 2025 Ronald • All rights reserved.</p>
+
+      <p class="footer-copy">
+        © 2025 Ronald • This is a fan-made website. One Piece is owned by Eiichiro Oda, Shueisha, and Toei Animation.
+      </p>
+    </div>
   </footer>
+
   <script src="script.js"></script>
 </body>
 
