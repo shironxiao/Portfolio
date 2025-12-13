@@ -1,0 +1,243 @@
+/* Devil Fruits Page Styles */
+
+/* Hero Section */
+#devil-fruits-hero {
+    padding: 10vh 0 4rem 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.fruits-content {
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 2rem;
+    text-align: left;
+}
+
+.fruits-content .title {
+    font-size: 5rem;
+    text-align: left;
+    margin-bottom: 1.5rem;
+}
+
+.blue-text {
+    color: #3B82F6;
+}
+
+.gold-text {
+    color: #fbbf24;
+}
+
+.fruits-description {
+    font-size: 2.5rem;
+    line-height: 1.8;
+    color: #FFFFFF;
+    text-align: left;
+    margin: 0;
+    margin-bottom: 3rem;
+    font-weight: 700;
+}
+
+/* Mera Mera no Mi Section */
+#mera-mera-fruit {
+    padding: 4rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mera-content {
+    max-width: 1200px;
+    width: 100%;
+}
+
+.section-title {
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.mera-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.mera-image-container {
+    width: 100%;
+    text-align: center;
+}
+
+.mera-image {
+    max-width: 100%;
+    width: 400px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.mera-info {
+    color: #FFFFFF;
+}
+
+.mera-subtitle {
+    font-size: 2.5rem;
+    color: #fbbf24;
+    margin-bottom: 1.5rem;
+}
+
+.mera-text {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    color: #e5e7eb;
+}
+
+.mera-text strong {
+    color: #3B82F6;
+}
+
+/* Ope Ope no Mi Section */
+#ope-ope-fruit {
+    padding: 4rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ope-content {
+    max-width: 1200px;
+    width: 100%;
+}
+
+.ope-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.ope-image-container {
+    width: 100%;
+    text-align: center;
+}
+
+.ope-image {
+    max-width: 100%;
+    width: 400px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.ope-info {
+    color: #FFFFFF;
+}
+
+.ope-subtitle {
+    font-size: 2.5rem;
+    color: #fbbf24;
+    margin-bottom: 1.5rem;
+}
+
+.ope-text {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    color: #e5e7eb;
+}
+
+.ope-text strong {
+    color: #3B82F6;
+}
+
+/* Fruit Types Section */
+#fruit-types {
+    padding: 4rem 2rem 6rem 2rem;
+}
+
+.types-content {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.types-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+.type-card {
+    background: #FFFFFF;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(59, 130, 246, 0.3);
+    border-radius: 20px;
+    padding: 3rem 2rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    cursor: pointer;
+}
+
+.type-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 50px rgba(251, 191, 36, 0.5);
+    border-color: rgba(251, 191, 36, 0.8);
+}
+
+.type-icon {
+    font-size: 5rem;
+    margin-bottom: 1.5rem;
+}
+
+.type-name {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fbbf24;
+    margin-bottom: 1rem;
+}
+
+.type-description {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    color: #374151;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    .gomu-layout {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .types-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .fruits-content .title,
+    .section-title {
+        font-size: 3rem;
+    }
+
+    .fruits-description {
+        font-size: 1.5rem;
+    }
+
+    .gomu-subtitle {
+        font-size: 2rem;
+    }
+
+    .gomu-text {
+        font-size: 1.1rem;
+    }
+}

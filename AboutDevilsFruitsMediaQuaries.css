@@ -1,0 +1,134 @@
+/* Media Queries for Devil Fruits Page - Mobile Responsiveness */
+
+@media screen and (max-width: 1200px) {
+
+    .mera-layout,
+    .ope-layout {
+        gap: 3rem;
+    }
+
+    .mera-image,
+    .ope-image {
+        width: 350px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+
+    .mera-layout,
+    .ope-layout {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .types-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .mera-image,
+    .ope-image {
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #devil-fruits-hero {
+        padding-top: 12vh;
+        min-height: 50vh;
+    }
+
+    .fruits-content .title {
+        font-size: 3.5rem;
+    }
+
+    .fruits-description-box {
+        padding: 2rem;
+    }
+
+    .fruits-description {
+        font-size: 1.5rem;
+    }
+
+    .section-title {
+        font-size: 3rem;
+    }
+
+
+    .mera-subtitle,
+    .ope-subtitle {
+        font-size: 2rem;
+    }
+
+    .mera-text,
+    .ope-text {
+        font-size: 1.1rem;
+    }
+
+    .mera-image,
+    .ope-image {
+        width: 250px;
+    }
+
+    .type-card {
+        padding: 2.5rem 1.5rem;
+    }
+
+    .type-icon {
+        font-size: 4rem;
+    }
+
+    .type-name {
+        font-size: 1.8rem;
+    }
+
+    .type-description {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .fruits-content .title {
+        font-size: 2.5rem;
+    }
+
+    .fruits-description {
+        font-size: 1.2rem;
+    }
+
+    .section-title {
+        font-size: 2.2rem;
+    }
+
+
+    .mera-subtitle,
+    .ope-subtitle {
+        font-size: 1.6rem;
+    }
+
+    .mera-text,
+    .ope-text {
+        font-size: 1rem;
+    }
+
+    .mera-image,
+    .ope-image {
+        width: 200px;
+    }
+
+    .type-card {
+        padding: 2rem 1rem;
+    }
+
+    .type-icon {
+        font-size: 3.5rem;
+    }
+
+    .type-name {
+        font-size: 1.5rem;
+    }
+
+    .type-description {
+        font-size: 1rem;
+    }
+}
