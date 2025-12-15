@@ -24,13 +24,17 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 2rem;
+    background: transparent !important;
+    background-color: transparent !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
   }
 
-  /* Theme toggle button in hamburger nav */
-  #hamburger-nav .theme-toggle {
-    margin-left: auto;
-    margin-right: 1rem;
+  #hamburger-nav .logo {
+    color: white;
   }
+
+
 
   #experience,
   .experience-details-container {
@@ -39,7 +43,14 @@
 
   #profile,
   .section-container {
-    display: block;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Make images appear on top for specific sections where text is first in HTML */
+  #about-luffy .section-container,
+  #gear-fifth .section-container {
+    flex-direction: column-reverse;
   }
 
   .arrow {
@@ -70,11 +81,14 @@
 
   #contact,
   footer {
-    height: 40vh;
+    height: auto;
+    min-height: fit-content;
   }
 
   footer {
     margin-bottom: 2rem;
+    margin-top: 4rem;
+    /* Added gap between text and footer */
   }
 
   #profile {
@@ -89,17 +103,18 @@
 
   footer nav {
     height: fit-content;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     display: flex;
     justify-content: center;
     width: 100%;
+    padding-left: 1rem;
   }
 
   footer .nav-links-container {
     display: flex;
     justify-content: center;
     width: 100%;
-    margin: 0 auto;
+    margin: 0;
   }
 
   footer .nav-links {
@@ -107,7 +122,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin: 0 auto;
+    margin: 0;
     padding: 0;
     width: 100%;
     flex-wrap: wrap;
@@ -151,11 +166,80 @@
     color: var(--text);
   }
 
-  .nav-links {
-    flex-direction: column;
-    gap: 0.5rem;
+  .footer-logo {
+    margin-bottom: 0.5rem;
+    width: 100%;
     text-align: center;
   }
+
+  .footer-logo img {
+    max-width: 120px;
+    margin-bottom: 1rem;
+  }
+
+  .footer-tagline {
+    font-size: 0.9rem;
+    margin-bottom: 0.2rem;
+    line-height: 1.6;
+    text-align: center;
+  }
+
+  .footer-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    width: 100%;
+    padding-left: 1rem;
+  }
+
+  .footer-nav h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+
+  .footer-nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    align-items: center;
+  }
+
+  .footer-socials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 0.5rem;
+    padding-left: 1rem;
+  }
+
+  .footer-socials h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+
+  .footer-socials-icons {
+    justify-content: center;
+    display: flex;
+    gap: 1rem;
+  }
+
+  .footer-copy {
+    font-size: 0.85rem;
+    padding-top: 1.5rem;
+    margin-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+    line-height: 1.6;
+    text-align: center;
+  }
+
+
 
   .section__pic-container {
     width: 220px;
@@ -179,15 +263,68 @@
     color: var(--muted-text);
   }
 
-  /* Theme toggle adjustments for mobile */
-  #hamburger-nav .theme-toggle {
-    padding: 6px 10px;
-    font-size: 16px;
-  }
+
 
   /* Footer copyright spacing for mobile */
   footer .copyright {
     margin-bottom: 5rem;
+  }
+
+  /* Fix for large images on mobile */
+  .luffy-main-image,
+  .luffy-poster-image,
+  .gear-fifth-image {
+    max-width: 100% !important;
+    height: auto !important;
+    object-fit: contain;
+    border-radius: 1rem;
+    margin: 1rem 0;
+  }
+
+  .luffy-image-section,
+  .luffy-journey-text {
+    width: 100%;
+  }
+
+  .gear-fifth-text {
+    width: 100%;
+    padding: 0 1rem;
+    /* Specific padding for Gear Fifth as requested */
+  }
+
+  /* Fix for Nav covering image on mobile */
+  #about-luffy {
+    padding-top: 15vh !important;
+    padding-bottom: 4rem;
+  }
+
+  /* Add space between sections and footer */
+  #luffy-journey,
+  #gear-fifth {
+    margin-bottom: 4rem;
+  }
+
+  /* Fix Title Overflow */
+  .title {
+    font-size: 2.5rem;
+    /* Reduce from default if needed */
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    text-align: center;
+    line-height: 1.2;
+  }
+
+  /* Fix Quote Overflow - Force 2 rows if needed */
+  .quote-text {
+    font-size: 1.5rem !important;
+    white-space: normal;
+    /* Allow wrapping */
+    text-align: center;
+    margin-bottom: 0.5rem;
+    padding: 0 1rem;
+    line-height: 1.3;
   }
 }
 

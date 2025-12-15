@@ -1,6 +1,28 @@
 /* Media Queries for Devil Fruits Page - Mobile Responsiveness */
 
 @media screen and (max-width: 1200px) {
+    #desktop-nav {
+        display: none;
+    }
+
+    #hamburger-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 2rem;
+        background: transparent !important;
+        background-color: transparent !important;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
+
+    #hamburger-nav .logo {
+        font-size: 1.5rem;
+        color: white;
+    }
+
+
+
 
     .mera-layout,
     .ope-layout {
@@ -15,10 +37,46 @@
 
 @media screen and (max-width: 1024px) {
 
+    .fruits-content {
+        flex-direction: column-reverse;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .fruits-content .title,
+    #legendary-fruits-title .title {
+        text-align: center;
+    }
+
+    .fruits-description {
+        text-align: center;
+        /* Center text on mobile */
+    }
+
+    .hero-image {
+        max-width: 350px;
+    }
+
     .mera-layout,
     .ope-layout {
         grid-template-columns: 1fr;
         gap: 2.5rem;
+    }
+
+    /* Center content when stacked */
+    .mera-info,
+    .ope-info {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mera-image-container,
+    .ope-image-container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
     }
 
     .types-grid {
@@ -84,6 +142,84 @@
 
     .type-description {
         font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    footer {
+        height: auto;
+        min-height: fit-content;
+        margin-bottom: 2rem;
+    }
+
+    footer .footer-nav,
+    footer .footer-socials {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        width: 100%;
+        margin-bottom: 0.5rem;
+        padding-left: 1rem;
+    }
+
+    .footer-tagline {
+        margin-bottom: 0.2rem;
+    }
+
+    footer .footer-nav h3,
+    footer .footer-socials h3 {
+        margin-bottom: 0.5rem;
+    }
+
+    footer .footer-nav ul {
+        gap: 0.2rem;
+    }
+
+    footer nav {
+        height: fit-content;
+        margin-bottom: 1rem;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding-left: 1rem;
+    }
+
+    footer .nav-links-container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin: 0;
+    }
+
+    footer .nav-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    footer .nav-links li {
+        margin: 0;
+        padding: 0;
+    }
+
+    .footer-copy {
+        margin-bottom: 2rem;
+        margin-top: 1rem;
+    }
+
+    /* Hamburger Nav adjustments */
+
+
+    #hamburger-nav .logo {
+        font-size: 1.5rem;
+        color: white;
     }
 }
 

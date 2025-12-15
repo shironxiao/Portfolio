@@ -250,6 +250,9 @@
 
     #hamburger-nav {
         display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 2rem;
         background: transparent !important;
         background-color: transparent !important;
         backdrop-filter: blur(10px);
@@ -268,12 +271,7 @@
         object-fit: contain;
     }
 
-    /* Theme toggle button in hamburger nav */
-    #hamburger-nav .theme-toggle {
-        position: absolute;
-        top: 1.5rem;
-        right: 5rem;
-    }
+
 
     /* Hero Section - Image at top */
     .hero-container {
@@ -303,11 +301,10 @@
 
     /* Lessons Section - Image at top */
     .lesson-article {
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
 
     .lesson-image-container {
-        order: -1;
         max-width: 100%;
     }
 
@@ -333,11 +330,10 @@
     /* Journey Article Section - Image at top */
     .journey-article {
         flex-direction: column-reverse;
+        /* Keeps image on top (Content last, Image first in flex rev) */
     }
 
-    .journey-article-image-container {
-        order: -1;
-    }
+
 
     .journey-article-title {
         font-size: 2rem;
@@ -377,16 +373,17 @@
     }
 
     /* Footer Responsive */
+    footer {
+        height: auto;
+        min-height: fit-content;
+        margin-bottom: 2rem;
+    }
+
     .onepiece-footer {
         padding: 3rem 1.5rem 2rem;
     }
 
-    .footer-container {
-        flex-direction: column;
-        gap: 2rem;
-        text-align: center;
-        align-items: center;
-    }
+
 
     .footer-logo {
         margin-bottom: 0.5rem;
@@ -400,43 +397,62 @@
 
     .footer-tagline {
         font-size: 0.9rem;
-        margin-bottom: 1.5rem;
+        margin-bottom: 0.2rem;
         line-height: 1.6;
     }
 
     .footer-nav {
-        margin-bottom: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 0.5rem;
         text-align: center;
         width: 100%;
+        padding-left: 1rem;
     }
 
     .footer-nav h3 {
         font-size: 1.2rem;
-        margin-bottom: 1rem;
+        margin-bottom: 0.5rem;
         text-align: center;
     }
 
     .footer-nav ul {
+        display: flex;
         flex-direction: column;
-        gap: 0.8rem;
+        gap: 0.2rem;
         align-items: center;
     }
 
     .footer-socials {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
         text-align: center;
         width: 100%;
-        margin-bottom: 1rem;
+        margin-bottom: 0.5rem;
+        padding-left: 1rem;
+    }
+
+    .footer-nav ul {
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+        align-items: center;
     }
 
     .footer-socials h3 {
         font-size: 1.2rem;
-        margin-bottom: 1rem;
+        margin-bottom: 0.5rem;
         text-align: center;
     }
 
-    .footer-socials-icons {
-        justify-content: center;
+    .footer-nav h3 {
+        margin-bottom: 0.5rem;
     }
+
+
 
     .footer-copy {
         font-size: 0.85rem;

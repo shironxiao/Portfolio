@@ -29,6 +29,10 @@ body::before {
     color: white !important;
 }
 
+#desktop-nav .nav-links a.active {
+    color: #fbbf24 !important;
+}
+
 #desktop-nav .nav-links a:hover {
     color: #fbbf24 !important;
     text-decoration-color: #fbbf24 !important;

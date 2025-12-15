@@ -1,29 +1,4 @@
-/* =========================================================
-   THEME VARIABLES (DEFAULT = LIGHT MODE)
-   ========================================================= */
 :root {
-  --bg: #F9FAFB;
-  --text: #1F2937;
-  --accent: #3B82F6;
-  --card-bg: #FFFFFF;
-  --border: #E5E7EB;
-  --muted-text: #6B7280;
-}
-
-/* SYSTEM DARK MODE */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #0F172A;
-    --text: #F8FAFC;
-    --accent: #38BDF8;
-    --card-bg: #1E293B;
-    --border: #334155;
-    --muted-text: #CBD5E1;
-  }
-}
-
-/* MANUAL OVERRIDE - DARK */
-:root[data-theme="dark"] {
   --bg: #0F172A;
   --text: #F8FAFC;
   --accent: #38BDF8;
@@ -32,32 +7,15 @@
   --muted-text: #CBD5E1;
 }
 
-/* MANUAL OVERRIDE - LIGHT */
-:root[data-theme="light"] {
-  --bg: #F9FAFB;
-  --text: #1F2937;
-  --accent: #3B82F6;
-  --card-bg: #FFFFFF;
-  --border: #E5E7EB;
-  --muted-text: #6B7280;
-}
-
-/* Make icons adapt to theme */
-.icon {
-  cursor: pointer;
-  height: 2rem;
-  filter: invert(0);
-  transition: filter 0.3s ease;
-}
-
-/* Invert icons in dark mode */
-:root[data-theme="dark"] .icon {
-  filter: invert(1) brightness(1.2);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* Keep certain icons normal (like profile pictures) */
-:root[data-theme="dark"] .section__pic-container img,
-:root[data-theme="dark"] .about-pic {
+.section__pic-container img,
+.about-pic {
   filter: none;
 }
 
@@ -82,6 +40,12 @@ body {
   transition: background 0.3s ease, color 0.3s ease;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
+}
+
+html,
+body {
+  overflow-x: hidden;
 }
 
 p {
@@ -110,7 +74,8 @@ nav {
 
 /* Desktop nav positioning */
 #desktop-nav {
-  position: sticky;
+  position: fixed;
+  width: 100%;
   top: 0;
   z-index: 1000;
   background: transparent;
@@ -122,7 +87,8 @@ nav {
 }
 
 #hamburger-nav {
-  position: sticky;
+  position: fixed;
+  width: 100%;
   top: 0;
   z-index: 1000;
   background-color: var(--bg);
@@ -384,6 +350,8 @@ section {
   margin: 0 10rem;
   box-sizing: border-box;
   min-height: fit-content;
+  position: relative;
+  overflow: hidden;
 }
 
 .section-container {
@@ -402,8 +370,8 @@ section {
   position: relative;
   left: 50%;
   transform: translateX(-50%);
-  margin: -10vh 0 0 0;
-  padding: 0 10rem;
+  margin: 0;
+  padding: 10vh 10rem 0;
 
   box-sizing: border-box;
   background-image: url('./assets/OceanBackground.jpg');
@@ -593,12 +561,16 @@ section[id="What i do"] .intro-text-container .section__text__p2 {
 
 /* SET SAIL FOR ADVENTURE SECTION */
 
-section[id="Set Sail for Adventure"] {
+section[id="set-sail-adventure"],
+#set-sail-adventure {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 4rem 0;
-  min-height: 100vh;
+  min-height: fit-content;
+  /* Reduced from 100vh */
+  height: auto;
+  /* Override global section height */
   background: white;
   width: 100vw;
   position: relative;
@@ -607,16 +579,16 @@ section[id="Set Sail for Adventure"] {
   margin: 0;
 }
 
-section[id="Set Sail for Adventure"] .title {
+#set-sail-adventure .title {
   margin-bottom: 4rem;
   color: #1F2937;
 }
 
-section[id="Set Sail for Adventure"] .title .blue-text {
+#set-sail-adventure .title .blue-text {
   color: #3B82F6;
 }
 
-section[id="Set Sail for Adventure"] .title .gold-text {
+#set-sail-adventure .title .gold-text {
   color: #fbbf24;
 }
 
@@ -627,6 +599,9 @@ section[id="Set Sail for Adventure"] .title .gold-text {
   max-width: 1400px;
   width: 100%;
   padding: 0 2rem;
+  margin-top: auto;
+  margin-bottom: auto;
+  /* Vertically center the cards */
 }
 
 .adventure-card {
@@ -678,7 +653,8 @@ section[id="Set Sail for Adventure"] .title .gold-text {
 }
 
 /* Styles for the "Me as a One Piece Character" section */
-section[id="Me as a One Piece Character"] {
+section[id="me-as-one-piece-character"],
+#me-as-one-piece-character {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -696,7 +672,7 @@ section[id="Me as a One Piece Character"] {
   background-repeat: no-repeat;
 }
 
-section[id="Me as a One Piece Character"]::before {
+#me-as-one-piece-character::before {
   content: '';
   position: absolute;
   top: 0;
@@ -707,7 +683,7 @@ section[id="Me as a One Piece Character"]::before {
   z-index: 0;
 }
 
-section[id="Me as a One Piece Character"] .title {
+#me-as-one-piece-character .title {
   margin-bottom: 1.5rem;
   margin-top: 0;
   position: relative;
@@ -854,7 +830,7 @@ section[id="Me as a One Piece Character"] .title {
 /* FOOTER SECTION */
 
 footer {
-  height: 26vh;
+  height: auto;
   margin: 0 1rem;
   display: flex;
   flex-direction: column;

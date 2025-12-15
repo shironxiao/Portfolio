@@ -21,12 +21,12 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="AboutLuffy.html">Luffy</a></li>
             <li><a href="AboutCrew.html">Crew</a></li>
-            <li><a href="AboutDevilsFruits.html">Devils Fruits</a></li>
+            <li><a href="AboutDevilsFruits.html" class="active">Devils Fruits</a></li>
             <li><a href="MyJourney.html">MyJourney</a></li>
         </ul>
     </nav>
     <nav id="hamburger-nav">
-        <div class="logo">Ronald</div>
+        <div class="logo"><img src="./assets/OnePieceLogo.png" alt="One Piece Logo" /></div>
         <div class="hamburger-menu">
             <div class="hamburger-icon" onclick="toggleMenu()">
                 <span></span>
@@ -48,14 +48,18 @@
     <!-- Main Devil Fruits Section -->
     <section id="devil-fruits-hero">
         <div class="fruits-content">
-            <h1 class="title"><span class="blue-text">Devil</span> <span class="gold-text">Fruits</span></h1>
-            <p class="fruits-description">
-                Mysterious fruits that grant incredible powers at the cost of the ability to swim.
-                Each fruit is unique and can only exist once in the world at a time!
-                Those who consume them are cursed by the sea and will sink like a hammer in water.
-                However, the extraordinary abilities they provide make them highly sought after by pirates and marines
-                alike!
-            </p>
+            <div class="fruits-text">
+                <h1 class="title"><span class="blue-text">Devil</span> <span class="gold-text">Fruits</span></h1>
+                <p class="fruits-description">
+                    Mysterious fruits that grant incredible powers at the cost of the ability to swim.
+                    Each fruit is unique and can only exist once in the world at a time!
+                    Those who consume them are cursed by the sea and will sink like a hammer in water.
+                    However, the extraordinary abilities they provide make them highly sought after by pirates and
+                    marines
+                    alike!
+                </p>
+            </div>
+            <img src="./assets/devil-fruits.png" alt="Devil Fruits Collection" class="hero-image" />
         </div>
     </section>
     <!-- Devil Fruit Types Section -->
@@ -90,6 +94,11 @@
                 </div>
             </div>
         </div>
+    </section>
+
+    <!-- Legendary Fruits Title -->
+    <section id="legendary-fruits-title" style="min-height: auto; height: auto; padding-bottom: 0;">
+        <h1 class="title"><span class="blue-text">Legendary</span> <span class="gold-text">Devil Fruits</span></h1>
     </section>
 
     <!-- Mera Mera no Mi Section -->

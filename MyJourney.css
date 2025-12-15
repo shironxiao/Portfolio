@@ -1,7 +1,20 @@
+/* Sticky Nav Styles */
+#desktop-nav,
+#hamburger-nav {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
 /* Journey Hero Section */
 .journey-hero {
-    padding: 4rem 2rem;
-    margin-top: 3rem;
+    padding: 14vh 2rem 4rem 2rem;
+    margin-top: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .hero-container {

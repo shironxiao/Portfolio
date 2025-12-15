@@ -61,11 +61,7 @@
     -webkit-backdrop-filter: blur(10px);
   }
 
-  /* Theme toggle button in hamburger nav */
-  #hamburger-nav .theme-toggle {
-    margin-left: auto;
-    margin-right: 1rem;
-  }
+
 
   #experience,
   .experience-details-container {
@@ -173,11 +169,12 @@
 
   #contact,
   footer {
-    height: 40vh;
+    height: auto;
+    min-height: fit-content;
   }
 
   footer {
-    margin-bottom: 2rem;
+    margin-bottom: 0;
   }
 
   #profile {
@@ -185,10 +182,12 @@
     min-height: 70vh;
     margin: 0;
     padding: 10vh 1.5rem 0;
+    margin-bottom: 0 !important;
   }
 
   .profile-logo {
-    max-width: 150px;
+    max-width: 250px;
+    /* Increased from 150px */
     margin-bottom: 1rem;
   }
 
@@ -203,17 +202,58 @@
     margin-bottom: 1.5rem;
   }
 
+  /* FIX: Remove 100vw + translateX on mobile to prevent dark strip on right */
+  #set-sail-adventure,
+  #me-as-one-piece-character,
+  .onepiece-footer {
+    width: 100%;
+    left: 0;
+    transform: none;
+    margin: 0 !important;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  /* Specific profile fix: Pull up behind nav */
+  #profile {
+    width: 100%;
+    left: 0;
+    transform: none;
+    margin-top: -10vh !important;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  /* Restore dark overlays/containers on mobile but avoid nav area */
+  #profile::before,
+  #me-as-one-piece-character::before {
+    display: block !important;
+    top: 0 !important;
+    /* Allow overlay to cover full height including nav */
+    height: 100% !important;
+  }
+
+  /* Remove dark background from specific sections if present */
+  .journey-crew {
+    background: transparent !important;
+  }
+
   .profile-buttons {
-    flex-direction: column;
+    flex-direction: row;
+    /* Align horizontally */
     gap: 1rem;
     width: 100%;
+    justify-content: center;
     align-items: center;
   }
 
   .profile-buttons .btn {
-    width: 100%;
-    font-size: 1rem;
-    padding: 1rem 1.5rem;
+    width: fit-content;
+    /* Reduce width */
+    font-size: 0.9rem;
+    padding: 0.8rem 1.2rem;
   }
 
   /* Ensure button colors are maintained on mobile */
@@ -229,24 +269,70 @@
     border-color: #fbbf24;
   }
 
+  /* Mobile hamburger nav - keep transparent and white text */
+  #hamburger-nav {
+    background: transparent !important;
+    background-color: transparent !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 0 1.5rem;
+  }
+
+  #hamburger-nav .logo {
+    color: white;
+    font-size: 1.5rem;
+    margin-left: 0;
+  }
+
+  /* Keep hamburger icon white */
+  .hamburger-icon span {
+    background-color: white;
+  }
+
+  /* Reduce top padding for Set Sail section on mobile to remove gap */
+  #set-sail-adventure {
+    padding-top: 1rem !important;
+    margin-top: 0 !important;
+  }
+
   article {
     font-size: 1rem;
     color: var(--text);
   }
 
+  /* Remove container styling (backgrounds/borders) on mobile */
+  .text-container,
+  .about-details-container,
+  .section__pic-container,
+  .onepiece-card,
+  .contact-info-container {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+  }
+
+  /* Adjust specific spacings after removing padding */
+  .onepiece-card,
+  .adventure-card {
+    width: 100%;
+    margin: 0;
+  }
+
   footer nav {
     height: fit-content;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     display: flex;
     justify-content: center;
     width: 100%;
+    padding-left: 1rem;
   }
 
   footer .nav-links-container {
     display: flex;
     justify-content: center;
     width: 100%;
-    margin: 0 auto;
+    margin: 0;
   }
 
   footer .nav-links {
@@ -254,7 +340,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin: 0 auto;
+    margin: 0;
     padding: 0;
     width: 100%;
     flex-wrap: wrap;
@@ -336,11 +422,7 @@
     margin-bottom: 5rem;
   }
 
-  /* Theme toggle adjustments for mobile */
-  #hamburger-nav .theme-toggle {
-    padding: 6px 10px;
-    font-size: 16px;
-  }
+
 
   /* One Piece section mobile responsive */
   .onepiece-container {
@@ -387,7 +469,11 @@
   }
 
   .adventure-card .btn {
-    max-width: 100%;
+    max-width: fit-content;
+    /* Reduced from 100% implicitly or inherited */
+    width: auto;
+    padding: 0.8rem 1.5rem;
+    margin-top: 1rem;
   }
 }
 

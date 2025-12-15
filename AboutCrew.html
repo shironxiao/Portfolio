@@ -20,13 +20,13 @@
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="AboutLuffy.html">Luffy</a></li>
-            <li><a href="AboutCrew.html">Crew</a></li>
+            <li><a href="AboutCrew.html" class="active">Crew</a></li>
             <li><a href="AboutDevilsFruits.html">Devils Fruits</a></li>
             <li><a href="MyJourney.html">MyJourney</a></li>
         </ul>
     </nav>
     <nav id="hamburger-nav">
-        <div class="logo">Ronald</div>
+        <div class="logo"><img src="./assets/OnePieceLogo.png" alt="One Piece Logo" /></div>
         <div class="hamburger-menu">
             <div class="hamburger-icon" onclick="toggleMenu()">
                 <span></span>
@@ -45,15 +45,154 @@
         </div>
     </nav>
 
-    <!-- Main Crew Section -->
     <section id="straw-hat-crew">
         <div class="crew-content">
             <h1 class="title"><span class="blue-text">Straw Hat</span> <span class="gold-text">Pirates</span></h1>
             <p class="crew-description">
                 Meet the legendary crew that will help Luffy become the King of Pirates!
             </p>
-            <div class="crew-image-container">
-                <img src="./assets/LuffyCrew.jpg" alt="Straw Hat Pirates Crew" class="crew-image" />
+        </div>
+
+        <div class="crew-grid">
+            <!-- 1. Roronoa Zoro (Text Left, Image Right) -->
+            <div class="crew-member-row">
+                <div class="member-info">
+                    <h2 class="member-name"><span class="gold-text">Roronoa Zoro</span></h2>
+                    <h3 class="member-role">Combatant (Swordsman)</h3>
+                    <p class="member-desc">
+                        The first member to join the crew. A master of the Three Sword Style (Santoryu) who aims to
+                        become the World's Greatest Swordsman. Known for his immense strength, loyalty, and terrible
+                        sense of direction.
+                    </p>
+                </div>
+                <div class="member-poster">
+                    <img src="./assets/zoro.jpg" alt="Roronoa Zoro Wanted Poster" class="wanted-poster" />
+                </div>
+            </div>
+
+            <!-- 2. Nami (Image Left, Text Right) -->
+            <div class="crew-member-row reverse">
+                <div class="member-info">
+                    <h2 class="member-name"><span class="gold-text">Nami</span></h2>
+                    <h3 class="member-role">Navigator</h3>
+                    <p class="member-desc">
+                        A talented navigator and cartographer who dreams of drawing a map of the entire world. She
+                        commands the weather using her Sorcery Clima-Tact and manages the crew's finances with an iron
+                        fist.
+                    </p>
+                </div>
+                <div class="member-poster">
+                    <img src="./assets/Nami.jpg" alt="Nami Wanted Poster" class="wanted-poster" />
+                </div>
+            </div>
+
+            <!-- 3. Usopp (Text Left, Image Right) -->
+            <div class="crew-member-row">
+                <div class="member-info">
+                    <h2 class="member-name"><span class="gold-text">Usopp</span></h2>
+                    <h3 class="member-role">Sniper</h3>
+                    <p class="member-desc">
+                        The son of Yasopp and a dreamer who aims to become a "Brave Warrior of the Sea". An expert
+                        marksman and inventor who uses his wits and an arsenal of unique gadgets (Pop Greens) to fight.
+                    </p>
+                </div>
+                <div class="member-poster">
+                    <img src="./assets/usop.jpg" alt="Usopp Wanted Poster" class="wanted-poster" />
+                </div>
+            </div>
+
+            <!-- 4. Sanji (Image Left, Text Right) -->
+            <div class="crew-member-row reverse">
+                <div class="member-info">
+                    <h2 class="member-name"><span class="gold-text">Vinsmoke Sanji</span></h2>
+                    <h3 class="member-role">Cook</h3>
+                    <p class="member-desc">
+                        A master chef who dreams of finding the All Blue. He fights using only his legs to protect his
+                        hands for cooking. A chivalrous gentleman who never refuses a starving person a meal.
+                    </p>
+                </div>
+                <div class="member-poster">
+                    <img src="./assets/sanji.jpg" alt="Sanji Wanted Poster" class="wanted-poster" />
+                </div>
+            </div>
+
+            <!-- 5. Tony Tony Chopper (Text Left, Image Right) -->
+            <div class="crew-member-row">
+                <div class="member-info">
+                    <h2 class="member-name"><span class="gold-text">Tony Tony Chopper</span></h2>
+                    <h3 class="member-role">Doctor</h3>
+                    <p class="member-desc">
+                        A reindeer who ate the Hito Hito no Mi (Human-Human Fruit). He dreams of becoming a doctor who
+                        can cure any disease. Despite his cute appearance, he is a powerful fighter with multiple
+                        transformation points.
+                    </p>
+                </div>
+                <div class="member-poster">
+                    <img src="./assets/Tony.jpg" alt="Chopper Wanted Poster" class="wanted-poster" />
+                </div>
+            </div>
+
+            <!-- 6. Nico Robin (Image Left, Text Right) -->
+            <div class="crew-member-row reverse">
+                <div class="member-info">
+                    <h2 class="member-name"><span class="gold-text">Nico Robin</span></h2>
+                    <h3 class="member-role">Archaeologist</h3>
+                    <p class="member-desc">
+                        The sole survivor of Ohara who can read Poneglyphs. She dreams of discovering the Rio Poneglyph
+                        and the true history of the world. She ate the Hana Hana no Mi, allowing her to sprout body
+                        parts anywhere.
+                    </p>
+                </div>
+                <div class="member-poster">
+                    <img src="./assets/Robin.jpg" alt="Robin Wanted Poster" class="wanted-poster" />
+                </div>
+            </div>
+
+            <!-- 7. Franky (Text Left, Image Right) -->
+            <div class="crew-member-row">
+                <div class="member-info">
+                    <h2 class="member-name"><span class="gold-text">Franky</span></h2>
+                    <h3 class="member-role">Shipwright</h3>
+                    <p class="member-desc">
+                        A cyborg and genius shipwright who built the Thousand Sunny. He dreams of creating a ship of
+                        dreams that can sail to the end of the world. Powered by cola, he is super strong and durable!
+                    </p>
+                </div>
+                <div class="member-poster">
+                    <img src="./assets/Frankly.jpg" alt="Franky Wanted Poster" class="wanted-poster" />
+                </div>
+            </div>
+
+            <!-- 8. Brook (Image Left, Text Right) -->
+            <div class="crew-member-row reverse">
+                <div class="member-info">
+                    <h2 class="member-name"><span class="gold-text">Brook</span></h2>
+                    <h3 class="member-role">Musician</h3>
+                    <p class="member-desc">
+                        A living skeleton who ate the Yomi Yomi no Mi (Revive-Revive Fruit). He dreams of reuniting with
+                        Laboon the whale. A master swordsman (Soul Solid) who can freeze enemies with the chill of the
+                        underworld.
+                    </p>
+                </div>
+                <div class="member-poster">
+                    <img src="./assets/brook.jpg" alt="Brook Wanted Poster" class="wanted-poster" />
+                </div>
+            </div>
+
+            <!-- 9. Jinbe (Text Left, Image Right) -->
+            <div class="crew-member-row">
+                <div class="member-info">
+                    <h2 class="member-name"><span class="gold-text">Jinbe</span></h2>
+                    <h3 class="member-role">Helmsman</h3>
+                    <p class="member-desc">
+                        The "Knight of the Sea" and a master of Fish-Man Karate. Former Warlord who dreams of
+                        coexistence between humans and fish-men. He provides wisdom, strength, and unmatched steering
+                        skills to the crew.
+                    </p>
+                </div>
+                <div class="member-poster">
+                    <img src="./assets/jinbe.png" alt="Jinbe Wanted Poster" class="wanted-poster" />
+                </div>
             </div>
         </div>
     </section>

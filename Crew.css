@@ -1,11 +1,23 @@
+/* Sticky Nav Styles */
+#desktop-nav,
+#hamburger-nav {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
 /* Straw Hat Crew Section Styles */
 #straw-hat-crew {
-    padding-top: 12vh;
+    padding-top: 14vh;
     padding-bottom: 4rem;
-    min-height: auto;
+    min-height: 100vh;
+    height: auto;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    overflow-y: auto;
 }
 
 .crew-content {
@@ -34,72 +46,92 @@
     line-height: 1.8;
     color: #FFFFFF;
     text-align: center;
-    margin: 0 auto 3rem auto;
+    margin: 0 auto 1rem auto;
     font-weight: 700;
     max-width: 900px;
 }
 
-.crew-image-container {
-    width: 100%;
-    text-align: center;
-    margin: 2rem auto 2rem auto;
+/* Zig-Zag Layout Styles */
+.crew-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+    margin-top: 4rem;
 }
 
-.crew-image {
-    max-width: 90%;
-    width: 1000px;
+.crew-member-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.crew-member-row.reverse {
+    flex-direction: row-reverse;
+}
+
+.member-info {
+    flex: 1;
+    text-align: left;
+    color: white;
+}
+
+.member-name {
+    font-size: 4rem;
+    margin-bottom: 0.5rem;
+    font-family: 'Anton', sans-serif;
+}
+
+.member-role {
+    font-size: 2rem;
+    color: #3B82F6;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.member-desc {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: #e5e7eb;
+}
+
+.member-bounty {
+    font-size: 1.5rem;
+    color: #fbbf24;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.member-poster {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wanted-poster {
+    width: 100%;
+    max-width: 400px;
     height: auto;
-    border-radius: 15px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
+    border: 8px solid #5a4a42;
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transform: rotate(2deg);
+    transition: transform 0.3s ease;
+    background-color: #f0e6d2;
+    /* Paper color placeholder */
+}
+
+.crew-member-row.reverse .wanted-poster {
+    transform: rotate(-2deg);
+}
+
+.wanted-poster:hover {
+    transform: scale(1.05) rotate(0deg) !important;
 }
 
 /* Responsive Design */
-@media screen and (max-width: 1024px) {
-    .crew-content .title {
-        font-size: 4rem;
-    }
-
-    .crew-description {
-        font-size: 1.8rem;
-    }
-
-    .crew-image {
-        width: 90%;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    #straw-hat-crew {
-        padding-top: 12vh;
-    }
-
-    .crew-content .title {
-        font-size: 3rem;
-    }
-
-    .crew-description {
-        font-size: 1.5rem;
-        padding: 0 1rem;
-    }
-
-    .crew-image {
-        width: 95%;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .crew-content .title {
-        font-size: 2.5rem;
-    }
-
-    .crew-description {
-        font-size: 1.2rem;
-    }
-
-    .crew-image {
-        width: 100%;
-    }
-}

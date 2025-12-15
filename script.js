@@ -216,7 +216,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Sections with light backgrounds that need dark text
     const lightSections = [
-        document.querySelector('section[id="Set Sail for Adventure"]'),
+        document.querySelector('section[id="set-sail-adventure"]'),
         document.querySelector('article[id="Gomu Gomu Fruits"]')
     ].filter(section => section !== null);
 
