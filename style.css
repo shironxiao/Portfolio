@@ -13,15 +13,11 @@
   box-sizing: border-box;
 }
 
-/* Keep certain icons normal (like profile pictures) */
 .section__pic-container img,
 .about-pic {
   filter: none;
 }
 
-/* =========================================================
-   GENERAL (PRESERVING ORIGINAL LAYOUT)
-   ========================================================= */
 @font-face {
   font-family: "Anton";
   src: url("fonts/Anton-Regular.ttf") format("truetype");
@@ -52,14 +48,10 @@ p {
   color: var(--muted-text);
 }
 
-/* TRANSITION */
-
 a,
 .btn {
   transition: all 300ms ease;
 }
-
-/* DESKTOP NAV */
 
 nav,
 .nav-links {
@@ -72,7 +64,6 @@ nav {
   height: 10vh;
 }
 
-/* Desktop nav positioning */
 #desktop-nav {
   position: fixed;
   width: 100%;
@@ -95,7 +86,6 @@ nav {
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-/* Hide nav when idle */
 #desktop-nav.hidden,
 #hamburger-nav.hidden {
   transform: translateY(-100%);
@@ -103,7 +93,6 @@ nav {
   pointer-events: none;
 }
 
-/* Show nav when active */
 #desktop-nav.visible,
 #hamburger-nav.visible {
   transform: translateY(0);
@@ -130,7 +119,6 @@ nav {
   text-decoration-color: #fbbf24;
 }
 
-/* Active state for desktop nav */
 #desktop-nav .nav-links a.active {
   color: #fbbf24;
   text-decoration: underline;
@@ -152,7 +140,6 @@ nav {
   text-decoration-color: var(--accent);
 }
 
-/* Active nav link indicator */
 .nav-links a.active {
   color: var(--accent);
   text-decoration: underline;
@@ -160,7 +147,6 @@ nav {
   text-decoration-color: var(--accent);
 }
 
-/* General link styles */
 a {
   color: var(--text);
   text-decoration: none;
@@ -182,7 +168,6 @@ a:hover {
   margin-left: 0;
 }
 
-/* Dark text for nav when over light backgrounds */
 #desktop-nav.nav-dark-text .nav-links a {
   color: #1F2937;
 }
@@ -196,7 +181,6 @@ a:hover {
   color: #1F2937;
 }
 
-/* Smooth color transitions */
 #desktop-nav .nav-links a,
 #desktop-nav .logo {
   transition: color 0.3s ease;
@@ -219,8 +203,6 @@ a:hover {
 .logo:hover {
   cursor: default;
 }
-
-/* THEME TOGGLE REMOVED */
 
 .btn-color-1,
 .btn-color-2 {
@@ -253,8 +235,6 @@ a:hover {
   border-color: #f59e0b;
   transform: scale(1.05);
 }
-
-/* HAMBURGER MENU */
 
 #hamburger-nav {
   display: none;
@@ -302,7 +282,6 @@ a:hover {
   transition: all 0.3 ease-in-out;
 }
 
-/* Active state for hamburger menu */
 .menu-links a.active {
   color: #fbbf24;
   font-weight: 600;
@@ -342,8 +321,6 @@ a:hover {
   transform: none;
 }
 
-/* SECTIONS */
-
 section {
   padding-top: 4vh;
   height: 96vh;
@@ -357,8 +334,6 @@ section {
 .section-container {
   display: flex;
 }
-
-/* PROFILE SECTION */
 
 #profile {
   display: flex;
@@ -457,12 +432,10 @@ section {
   overflow: hidden;
   padding: 0.5rem;
   background: var(--card-bg);
-  /* adapts to light/dark via CSS variables */
   border: 0.08rem solid var(--border);
   box-shadow: 0 6px 18px rgba(16, 24, 40, 0.06);
 }
 
-/* Ensure the image fills the circular frame */
 .section__pic-container img,
 .about-pic {
   width: 100%;
@@ -503,16 +476,10 @@ section {
   color: var(--text);
 }
 
-
-
-/* ICONS */
-
 .icon {
   cursor: pointer;
   height: 2rem;
 }
-
-/* BUTTONS */
 
 .btn-container {
   display: flex;
@@ -528,12 +495,10 @@ section {
   border-radius: 2rem;
 }
 
-
 .btn-container {
   gap: 1rem;
 }
 
-/* Styles for the "What i do" intro text (added) */
 section[id="What i do"] {
   display: flex;
   justify-content: center;
@@ -559,8 +524,6 @@ section[id="What i do"] .intro-text-container .section__text__p2 {
   margin-bottom: 1rem;
 }
 
-/* SET SAIL FOR ADVENTURE SECTION */
-
 section[id="set-sail-adventure"],
 #set-sail-adventure {
   display: flex;
@@ -568,9 +531,7 @@ section[id="set-sail-adventure"],
   align-items: center;
   padding: 4rem 0;
   min-height: fit-content;
-  /* Reduced from 100vh */
   height: auto;
-  /* Override global section height */
   background: white;
   width: 100vw;
   position: relative;
@@ -601,7 +562,6 @@ section[id="set-sail-adventure"],
   padding: 0 2rem;
   margin-top: auto;
   margin-bottom: auto;
-  /* Vertically center the cards */
 }
 
 .adventure-card {
@@ -652,7 +612,6 @@ section[id="set-sail-adventure"],
   max-width: 200px;
 }
 
-/* Styles for the "Me as a One Piece Character" section */
 section[id="me-as-one-piece-character"],
 #me-as-one-piece-character {
   display: flex;
@@ -751,9 +710,6 @@ section[id="me-as-one-piece-character"],
   transform: translateY(-2px);
 }
 
-
-
-/* Responsive styles for "What i do" section */
 @media (max-width: 900px) {
   section[id="What i do"] {
     padding: 1.5rem 0;
@@ -778,12 +734,9 @@ section[id="me-as-one-piece-character"],
   }
 }
 
-
-/* Responsive adjustments for smaller screens to prevent overlapping */
 @media (max-width: 900px) {
   section {
     height: auto;
-    /* let content determine height on small screens */
     margin: 0 2rem;
     padding-top: 3vh;
   }
@@ -824,10 +777,6 @@ section[id="me-as-one-piece-character"],
   }
 }
 
-
-
-
-/* FOOTER SECTION */
 
 footer {
   height: auto;

@@ -1,5 +1,3 @@
-/* Media Queries for Devil Fruits Page - Mobile Responsiveness */
-
 @media screen and (max-width: 1200px) {
     #desktop-nav {
         display: none;
@@ -21,16 +19,15 @@
         color: white;
     }
 
-
-
-
     .mera-layout,
-    .ope-layout {
+    .ope-layout,
+    .magu-layout {
         gap: 3rem;
     }
 
     .mera-image,
-    .ope-image {
+    .ope-image,
+    .magu-image {
         width: 350px;
     }
 }
@@ -43,29 +40,46 @@
         text-align: center;
     }
 
+    .artificial-layout {
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+    }
+
     .fruits-content .title,
-    #legendary-fruits-title .title {
+    #legendary-fruits-title .title,
+    .artificial-text-container .title {
         text-align: center;
     }
 
     .fruits-description {
         text-align: center;
-        /* Center text on mobile */
     }
+
+    .artificial-description {
+        text-align: center;
+    }
+
 
     .hero-image {
         max-width: 350px;
     }
 
+    .artificial-image {
+        max-width: 350px;
+        order: -1;
+    }
+
     .mera-layout,
-    .ope-layout {
+    .ope-layout,
+    .magu-layout {
         grid-template-columns: 1fr;
         gap: 2.5rem;
     }
 
-    /* Center content when stacked */
     .mera-info,
-    .ope-info {
+    .ope-info,
+    .magu-info {
         text-align: center;
         display: flex;
         flex-direction: column;
@@ -73,7 +87,8 @@
     }
 
     .mera-image-container,
-    .ope-image-container {
+    .ope-image-container,
+    .magu-image-container {
         display: flex;
         justify-content: center;
         width: 100%;
@@ -85,7 +100,8 @@
     }
 
     .mera-image,
-    .ope-image {
+    .ope-image,
+    .magu-image {
         width: 300px;
     }
 }
@@ -96,7 +112,8 @@
         min-height: 50vh;
     }
 
-    .fruits-content .title {
+    .fruits-content .title,
+    .artificial-text-container .title {
         font-size: 3.5rem;
     }
 
@@ -104,7 +121,8 @@
         padding: 2rem;
     }
 
-    .fruits-description {
+    .fruits-description,
+    .artificial-description {
         font-size: 1.5rem;
     }
 
@@ -114,17 +132,20 @@
 
 
     .mera-subtitle,
-    .ope-subtitle {
+    .ope-subtitle,
+    .magu-subtitle {
         font-size: 2rem;
     }
 
     .mera-text,
-    .ope-text {
+    .ope-text,
+    .magu-text {
         font-size: 1.1rem;
     }
 
     .mera-image,
-    .ope-image {
+    .ope-image,
+    .magu-image {
         width: 250px;
     }
 
@@ -214,9 +235,6 @@
         margin-top: 1rem;
     }
 
-    /* Hamburger Nav adjustments */
-
-
     #hamburger-nav .logo {
         font-size: 1.5rem;
         color: white;
@@ -224,11 +242,14 @@
 }
 
 @media screen and (max-width: 480px) {
-    .fruits-content .title {
+
+    .fruits-content .title,
+    .artificial-text-container .title {
         font-size: 2.5rem;
     }
 
-    .fruits-description {
+    .fruits-description,
+    .artificial-description {
         font-size: 1.2rem;
     }
 
@@ -238,17 +259,20 @@
 
 
     .mera-subtitle,
-    .ope-subtitle {
+    .ope-subtitle,
+    .magu-subtitle {
         font-size: 1.6rem;
     }
 
     .mera-text,
-    .ope-text {
+    .ope-text,
+    .magu-text {
         font-size: 1rem;
     }
 
     .mera-image,
-    .ope-image {
+    .ope-image,
+    .magu-image {
         width: 200px;
     }
 

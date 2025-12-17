@@ -26,7 +26,6 @@
     height: fit-content;
   }
 
-  /* One Piece section responsive */
   .onepiece-card {
     padding: 2.5rem 3rem;
   }
@@ -35,7 +34,6 @@
     font-size: 2.2rem !important;
   }
 
-  /* Adventure cards responsive */
   .adventure-container {
     gap: 2.5rem;
   }
@@ -59,6 +57,14 @@
     background-color: transparent !important;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+  }
+
+  #hamburger-nav.nav-dark-text .logo {
+    color: #1F2937;
+  }
+
+  #hamburger-nav.nav-dark-text .hamburger-icon span {
+    background-color: #1F2937;
   }
 
 
@@ -127,7 +133,6 @@
     margin-top: 0;
   }
 
-  /* One Piece section responsive */
   .onepiece-container {
     padding: 0 1.5rem;
   }
@@ -146,7 +151,6 @@
     font-size: 1rem;
   }
 
-  /* Adventure cards responsive */
   .adventure-container {
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
@@ -187,7 +191,6 @@
 
   .profile-logo {
     max-width: 250px;
-    /* Increased from 150px */
     margin-bottom: 1rem;
   }
 
@@ -202,7 +205,6 @@
     margin-bottom: 1.5rem;
   }
 
-  /* FIX: Remove 100vw + translateX on mobile to prevent dark strip on right */
   #set-sail-adventure,
   #me-as-one-piece-character,
   .onepiece-footer {
@@ -214,7 +216,6 @@
     padding-right: 1.5rem;
   }
 
-  /* Specific profile fix: Pull up behind nav */
   #profile {
     width: 100%;
     left: 0;
@@ -226,23 +227,19 @@
     padding-right: 1.5rem;
   }
 
-  /* Restore dark overlays/containers on mobile but avoid nav area */
   #profile::before,
   #me-as-one-piece-character::before {
     display: block !important;
     top: 0 !important;
-    /* Allow overlay to cover full height including nav */
     height: 100% !important;
   }
 
-  /* Remove dark background from specific sections if present */
   .journey-crew {
     background: transparent !important;
   }
 
   .profile-buttons {
     flex-direction: row;
-    /* Align horizontally */
     gap: 1rem;
     width: 100%;
     justify-content: center;
@@ -251,12 +248,10 @@
 
   .profile-buttons .btn {
     width: fit-content;
-    /* Reduce width */
     font-size: 0.9rem;
     padding: 0.8rem 1.2rem;
   }
 
-  /* Ensure button colors are maintained on mobile */
   .btn-color-1 {
     background: #3B82F6;
     color: white;
@@ -269,7 +264,6 @@
     border-color: #fbbf24;
   }
 
-  /* Mobile hamburger nav - keep transparent and white text */
   #hamburger-nav {
     background: transparent !important;
     background-color: transparent !important;
@@ -284,14 +278,12 @@
     margin-left: 0;
   }
 
-  /* Keep hamburger icon white */
   .hamburger-icon span {
     background-color: white;
   }
 
-  /* Reduce top padding for Set Sail section on mobile to remove gap */
   #set-sail-adventure {
-    padding-top: 1rem !important;
+    padding-top: 4rem !important;
     margin-top: 0 !important;
   }
 
@@ -300,7 +292,6 @@
     color: var(--text);
   }
 
-  /* Remove container styling (backgrounds/borders) on mobile */
   .text-container,
   .about-details-container,
   .section__pic-container,
@@ -312,7 +303,6 @@
     padding: 0 !important;
   }
 
-  /* Adjust specific spacings after removing padding */
   .onepiece-card,
   .adventure-card {
     width: 100%;
@@ -417,14 +407,12 @@
     color: var(--muted-text);
   }
 
-  /* Footer copyright spacing for mobile */
   footer .copyright {
     margin-bottom: 5rem;
   }
 
 
 
-  /* One Piece section mobile responsive */
   .onepiece-container {
     padding: 0 1rem;
   }
@@ -445,7 +433,6 @@
     font-size: 0.9rem;
   }
 
-  /* Adventure cards mobile responsive */
   .adventure-container {
     grid-template-columns: 1fr;
     gap: 1.5rem;
@@ -470,7 +457,6 @@
 
   .adventure-card .btn {
     max-width: fit-content;
-    /* Reduced from 100% implicitly or inherited */
     width: auto;
     padding: 0.8rem 1.5rem;
     margin-top: 1rem;

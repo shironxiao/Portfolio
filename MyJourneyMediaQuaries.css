@@ -1,6 +1,3 @@
-/* ADDITIONAL RESPONSIVE STYLES FOR MY JOURNEY PAGE */
-
-/* Extra Large Screens */
 @media screen and (min-width: 1600px) {
     .journey-hero {
         min-height: 65vh;
@@ -27,7 +24,7 @@
     }
 }
 
-/* Tablet Landscape */
+
 @media screen and (max-width: 1024px) and (min-width: 769px) {
     .journey-timeline {
         padding: 5rem 2rem;
@@ -58,7 +55,7 @@
     }
 }
 
-/* Small Tablets */
+
 @media screen and (max-width: 768px) and (min-width: 481px) {
     .journey-timeline {
         padding: 4rem 1.5rem;
@@ -113,7 +110,7 @@
     }
 }
 
-/* Mobile Devices */
+
 @media screen and (max-width: 480px) {
     .journey-hero {
         padding: 2.5rem 1rem;
@@ -240,10 +237,10 @@
     }
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
 
-    /* Hamburger Menu */
+
     #desktop-nav {
         display: none;
     }
@@ -259,7 +256,7 @@
         -webkit-backdrop-filter: blur(10px);
     }
 
-    /* Make hamburger nav logo visible */
+
     #hamburger-nav .logo {
         color: white;
         font-weight: 600;
@@ -273,7 +270,7 @@
 
 
 
-    /* Hero Section - Image at top */
+
     .hero-container {
         flex-direction: column-reverse;
     }
@@ -299,7 +296,7 @@
         font-size: 1rem;
     }
 
-    /* Lessons Section - Image at top */
+
     .lesson-article {
         flex-direction: column;
     }
@@ -327,10 +324,10 @@
         font-size: 1rem;
     }
 
-    /* Journey Article Section - Image at top */
+
     .journey-article {
         flex-direction: column-reverse;
-        /* Keeps image on top (Content last, Image first in flex rev) */
+        flex-direction: column-reverse;
     }
 
 
@@ -351,7 +348,7 @@
         max-width: 100%;
     }
 
-    /* Crew Section */
+
     .crew-article {
         flex-direction: column;
     }
@@ -372,7 +369,7 @@
         justify-content: center;
     }
 
-    /* Footer Responsive */
+
     footer {
         height: auto;
         min-height: fit-content;
@@ -464,7 +461,7 @@
     }
 }
 
-/* Very Small Devices */
+
 @media screen and (max-width: 360px) {
     .hero-title {
         font-size: 1.6rem;
@@ -516,7 +513,7 @@
     }
 }
 
-/* Landscape Orientation on Mobile */
+
 @media screen and (max-height: 500px) and (orientation: landscape) {
     .journey-hero {
         min-height: 90vh;
@@ -538,7 +535,7 @@
     }
 }
 
-/* Print Styles */
+
 @media print {
     .journey-hero {
         page-break-after: avoid;
