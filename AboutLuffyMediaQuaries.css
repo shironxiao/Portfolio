@@ -47,14 +47,106 @@
     flex-direction: column;
   }
 
-  /* Make images appear on top for specific sections where text is first in HTML */
+
   #about-luffy .section-container,
   #gear-fifth .section-container {
     flex-direction: column-reverse;
+    align-items: center;
   }
 
-  .arrow {
-    display: none;
+  #about-luffy {
+    padding-top: 15vh;
+    margin-bottom: 2rem;
+  }
+
+  .luffy-image-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+
+  .luffy-main-image {
+    width: 80%;
+    max-width: 500px;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .about-details-container {
+    text-align: center;
+  }
+
+  .luffy-description {
+    text-align: center;
+  }
+
+  #about-luffy .title {
+    justify-content: center;
+    display: flex;
+    gap: 1rem;
+  }
+
+  /* Centering for Section 2 (Journey) */
+  #luffy-journey .section-container {
+    align-items: center;
+  }
+
+  .luffy-journey-text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .luffy-poster-image {
+    width: 60%;
+    max-width: 350px;
+    height: auto;
+    margin: 0 auto 2rem;
+    display: block;
+    border-radius: 1rem;
+  }
+
+  .journey-description {
+    text-align: center;
+  }
+
+  #luffy-journey .title {
+    justify-content: center;
+    display: flex;
+    gap: 1rem;
+  }
+
+  /* Centering for Article (Gear Fifth) */
+  .gear-fifth-text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .gear-fifth-image {
+    width: 80%;
+    max-width: 500px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    border-radius: 1rem;
+  }
+
+  .gear-description {
+    text-align: center;
+  }
+
+  #gear-fifth .title {
+    justify-content: center;
+    display: flex;
+    gap: 1rem;
   }
 
   section,
@@ -86,7 +178,6 @@
   }
 
   footer {
-    margin-bottom: 2rem;
     margin-top: 4rem;
     /* Added gap between text and footer */
   }
@@ -164,6 +255,7 @@
   .logo {
     font-size: 1.5rem;
     color: var(--text);
+    margin-left: 0;
   }
 
   .footer-logo {
@@ -270,18 +362,32 @@
     margin-bottom: 5rem;
   }
 
-  /* Fix for large images on mobile */
-  .luffy-main-image,
-  .luffy-poster-image,
-  .gear-fifth-image {
-    max-width: 100% !important;
+  .luffy-poster-image {
+    max-width: 250px !important;
     height: auto !important;
     object-fit: contain;
     border-radius: 1rem;
     margin: 1rem auto;
-    /* Changed to auto for centering */
     display: block;
-    /* Ensure it respects margin auto */
+  }
+
+  .gear-fifth-image {
+    max-width: 300px !important;
+    height: auto !important;
+    object-fit: contain;
+    border-radius: 1rem;
+    margin: 1rem auto;
+    display: block;
+  }
+
+  .luffy-main-image {
+    max-width: 100% !important;
+    width: 100%;
+    height: auto !important;
+    object-fit: contain;
+    border-radius: 1rem;
+    margin: 1rem auto;
+    display: block;
   }
 
   .luffy-image-section,
@@ -296,7 +402,16 @@
   .gear-fifth-text {
     width: 100%;
     padding: 0 1rem;
-    /* Specific padding for Gear Fifth as requested */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .luffy-description,
+  .journey-description,
+  .gear-description {
+    text-align: center;
   }
 
   /* Fix for Nav covering image on mobile */
@@ -314,13 +429,21 @@
   /* Fix Title Overflow */
   .title {
     font-size: 2.5rem;
-    /* Reduce from default if needed */
     flex-wrap: wrap;
     display: flex;
     justify-content: center;
     gap: 0.5rem;
     text-align: center;
     line-height: 1.2;
+  }
+
+  #about-luffy .title {
+    font-size: 3rem !important;
+  }
+
+  #luffy-journey .title,
+  #gear-fifth .title {
+    font-size: 2.5rem !important;
   }
 
   /* Fix Quote Overflow - Force 2 rows if needed */

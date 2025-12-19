@@ -18,7 +18,6 @@
         color: white;
     }
 
-    /* Stack Crew content vertically on tablets */
     .crew-member-row,
     .crew-member-row.reverse {
         flex-direction: column-reverse !important;
@@ -51,7 +50,6 @@
         .wanted-poster {
             max-width: 100%;
             width: 300px;
-            /* Force a reasonable size on mobile */
         }
 
         .member-name {
@@ -63,7 +61,6 @@
         footer {
             height: auto;
             min-height: fit-content;
-            margin-bottom: 2rem;
         }
 
         footer .footer-nav,
@@ -123,16 +120,15 @@
         }
 
         .footer-copy {
-            margin-bottom: 2rem;
+            margin-bottom: 1rem;
             margin-top: 1rem;
         }
-
-        /* Hamburger Nav adjustments */
 
 
         #hamburger-nav .logo {
             font-size: 1.5rem;
             color: white;
+            margin-left: 0;
         }
     }
 

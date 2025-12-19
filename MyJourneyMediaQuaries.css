@@ -1,4 +1,10 @@
 @media screen and (min-width: 1600px) {
+
+    .break-mobile,
+    .break-tablet {
+        display: none;
+    }
+
     .journey-hero {
         min-height: 65vh;
     }
@@ -108,12 +114,20 @@
     .stat-label {
         font-size: 1rem;
     }
+
+    .break-mobile {
+        display: none;
+    }
+
+    .break-tablet {
+        display: inline;
+    }
 }
 
 
 @media screen and (max-width: 480px) {
     .journey-hero {
-        padding: 2.5rem 1rem;
+        padding: 7rem 1rem 1rem 1rem;
         margin-top: 1rem;
     }
 
@@ -260,13 +274,10 @@
     #hamburger-nav .logo {
         color: white;
         font-weight: 600;
+        margin-left: 0;
     }
 
-    #hamburger-nav .logo img {
-        max-height: 40px;
-        width: auto;
-        object-fit: contain;
-    }
+
 
 
 
@@ -277,15 +288,27 @@
 
     .journey-hero {
         flex-direction: column;
-        padding: 3rem 1.5rem;
+        padding: 7rem 1.5rem 1rem 1.5rem;
+        align-items: center;
+    }
+
+    .hero-content {
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .hero-title {
         font-size: 2rem;
+        text-align: center;
+        width: 100%;
     }
 
     .hero-subtitle {
         font-size: 1.1rem;
+        text-align: center;
     }
 
     .hero-quote {
@@ -296,13 +319,22 @@
         font-size: 1rem;
     }
 
+    .journey-lessons,
+    .journey-article-section {
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+    }
+
 
     .lesson-article {
         flex-direction: column;
+        align-items: center;
     }
 
     .lesson-image-container {
-        max-width: 100%;
+        max-width: 80%;
+        margin: 0 auto;
+        margin-top: 0;
     }
 
     .lesson-quote {
@@ -314,20 +346,36 @@
 
     .lessons-title {
         font-size: 2rem;
+        text-align: center;
     }
 
     .lesson-heading {
         font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .lesson-content {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .lesson-text {
         font-size: 1rem;
+        text-align: center;
     }
 
 
     .journey-article {
         flex-direction: column-reverse;
-        flex-direction: column-reverse;
+        align-items: stretch;
+    }
+
+    .journey-article-content {
+        width: 100%;
+        text-align: center;
+        padding: 0 1rem;
     }
 
 
@@ -345,7 +393,8 @@
     }
 
     .journey-article-image-container {
-        max-width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
     }
 
 
@@ -370,14 +419,8 @@
     }
 
 
-    footer {
-        height: auto;
-        min-height: fit-content;
-        margin-bottom: 2rem;
-    }
-
     .onepiece-footer {
-        padding: 3rem 1.5rem 2rem;
+        padding: 3rem 0.5rem 2rem;
     }
 
 
@@ -404,8 +447,10 @@
         align-items: center;
         margin-bottom: 0.5rem;
         text-align: center;
+        text-align: center;
         width: 100%;
-        padding-left: 1rem;
+        padding-left: 0;
+        margin-bottom: 1rem;
     }
 
     .footer-nav h3 {
@@ -427,9 +472,10 @@
         align-items: center;
         text-align: center;
         text-align: center;
+        text-align: center;
         width: 100%;
-        margin-bottom: 0.5rem;
-        padding-left: 1rem;
+        margin-bottom: 2rem;
+        padding-left: 0;
     }
 
     .footer-nav ul {
@@ -453,11 +499,21 @@
 
     .footer-copy {
         font-size: 0.85rem;
-        padding-top: 1.5rem;
-        margin-top: 1rem;
+        padding: 1.5rem 0 0;
+        margin: 1rem auto 0;
         border-top: 1px solid rgba(255, 255, 255, 0.1);
         width: 100%;
+        max-width: 100%;
         line-height: 1.6;
+        text-align: center;
+    }
+
+    .break-mobile {
+        display: inline;
+    }
+
+    .break-tablet {
+        display: none;
     }
 }
 
@@ -577,6 +633,27 @@
 
     nav,
     footer {
+        display: none;
+    }
+}
+
+/* Specific Break Logic Overrides */
+@media screen and (max-width: 768px) {
+    .break-mobile {
+        display: none;
+    }
+
+    .break-tablet {
+        display: inline;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .break-mobile {
+        display: inline;
+    }
+
+    .break-tablet {
         display: none;
     }
 }

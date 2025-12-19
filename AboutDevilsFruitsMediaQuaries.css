@@ -66,7 +66,7 @@
     }
 
     .artificial-image {
-        max-width: 350px;
+        max-width: 300px;
         order: -1;
     }
 
@@ -113,6 +113,7 @@
     }
 
     .fruits-content .title,
+    #legendary-fruits-title .title,
     .artificial-text-container .title {
         font-size: 3.5rem;
     }
@@ -170,7 +171,6 @@
     footer {
         height: auto;
         min-height: fit-content;
-        margin-bottom: 2rem;
     }
 
     footer .footer-nav,
@@ -231,19 +231,21 @@
     }
 
     .footer-copy {
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
         margin-top: 1rem;
     }
 
     #hamburger-nav .logo {
         font-size: 1.5rem;
         color: white;
+        margin-left: 0;
     }
 }
 
 @media screen and (max-width: 480px) {
 
     .fruits-content .title,
+    #legendary-fruits-title .title,
     .artificial-text-container .title {
         font-size: 2.5rem;
     }
