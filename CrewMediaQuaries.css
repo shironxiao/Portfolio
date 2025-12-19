@@ -146,3 +146,49 @@
         }
     }
 }
+
+/* Responsive Copyright Text */
+.footer-copy {
+    font-size: 0.85rem;
+    padding: 1.5rem 0 0;
+    margin: 1rem auto 0;
+    border-top: none;
+    width: 100%;
+    max-width: 100%;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.onepiece-footer {
+    padding: 3rem 0.5rem 2rem;
+}
+
+
+/* Specific Break Logic Overrides */
+@media screen and (min-width: 1600px) {
+
+    .break-mobile,
+    .break-tablet {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .break-mobile {
+        display: none;
+    }
+
+    .break-tablet {
+        display: inline;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .break-mobile {
+        display: inline;
+    }
+
+    .break-tablet {
+        display: none;
+    }
+}
